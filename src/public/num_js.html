@@ -1,0 +1,24 @@
+<script>
+	$(function () {
+		//商品数量加减
+		var $plus = $('.num_plus'),
+			$reduce = $('.num_minus'),
+			$all_sum = $('.num_ipt');
+
+		$plus.click(function () {
+			var $inputVal = $(this).prev('input'),
+				$count = parseInt($inputVal.val()) + 1,
+				$obj = $(this).parents('.num_form').find('.num_minus');
+			$inputVal.val($count);
+		})
+
+		$reduce.click(function () {
+			var $inputVal = $(this).next('input'),
+				$count = parseInt($inputVal.val()) - 1;
+			if ($inputVal.val() <= 1) {
+				return;
+			}
+			$inputVal.val($count);
+		})
+	})
+</script>

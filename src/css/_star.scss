@@ -1,0 +1,49 @@
+.starList {
+	display: inline-block;
+	zoom: 1;
+}
+
+.starList:after {
+	content: '';
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+
+.starList li {
+	float: left;
+	width: 14px;
+	height: 14px;
+	margin: 0 2px;
+	background: url(../img/kongStar.png) no-repeat center;
+	background-size: 14px 14px;
+}
+
+.starList li.active {
+	background-image: url(../img/singleStar.png);
+}
+
+.star-box {
+	display: inline-block;
+	width: 120px;
+	height: 23px;
+	cursor: pointer;
+}
+
+.star-box:after {
+	content: '';
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+
+.star-list {
+	float: left;
+	width: 24px;
+	height: 23px;
+	background-image: url(../img/123.png);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}

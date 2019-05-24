@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('public/meta.html')
+</head>
+
+<body class="">
+
+	@@include('public/top_box.html')
+
+	<div class="p_12">
+		<div class="travel_banner bd_radius bg_cover" style="background-image: url(../img/banner.png);"></div>
+	</div>
+
+	<div class="flex_between p_12 bg_white bd_btm">
+		<div class="title_left am-text-lg">问答</div>
+		<ul class="ques_menu flex_normal am-text-sm">
+			<li class="active"><a class="am-block" href="javascript:;">全部</a></li>
+			<li class=""><a class="am-block" href="javascript:;">最新</a></li>
+		</ul>
+	</div>
+
+	<div class="ques_wrap">
+		<ul class="ques_list">
+			<li class="ques_item">
+				@@include('public/question_item.html')
+			</li>
+			<li class="ques_item">
+				@@include('public/question_item.html')
+			</li>
+			<li class="ques_item">
+				@@include('public/question_item.html')
+			</li>
+			<li class="ques_item">
+				@@include('public/question_item.html')
+			</li>
+		</ul>
+		<div class="no_data">没有更多提问~</div>
+	</div>
+
+	<!-- 提问图片 -->
+	<a class="pic_position pic_ask am-block" href="ask.html"><img src="img/ask_pic.png" width="60" height="60" alt=""></a>
+
+
+</body>
+
+</html>

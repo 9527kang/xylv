@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('public/meta.html')
+</head>
+
+<body class="bg_normal">
+
+	<!-- 返回 -->
+	<div class="back_box">
+		退款成功
+		<a class="back_icon" href="javascript:history.back(-1)">
+			<img src="img/icon_right.png" width="6" height="11" alt="">
+		</a>
+	</div>
+
+	<div class="user_top big bg_cover col_white" style="background-image: url(img/order_sucess.png)">
+		<div class="am-text-lg">退货/退款成功</div>
+		<div class="am-text-sm">退款会在3-5个工作日内退回账户</div>
+	</div>
+
+	<div class="bg_white bd_btm_10">
+		<div class="p_12">已退货商品</div>
+		@@include('public/order_goods.html')
+		@@include('public/order_goods.html')
+
+		<div class="p_12 bd_btm am-text-right">
+			合计：<span class="col_main am-text-lg">￥56.89</span>
+		</div>
+
+	</div>
+
+	<div class="bg_white">
+		<div class="p_12">
+			<h6 class="mar_btm_6">退货订单信息</h6>
+			<ul class="am-text-sm col_nine">
+				<li class="flex_normal">
+					<span class="made_lb">退款原因</span><span>多拍、错拍</span>
+				</li>
+				<li class="flex_normal">
+					<span class="made_lb">退款金额</span><span>￥56.99</span>
+				</li>
+				<li class="flex_normal">
+					<span class="made_lb">申请时间</span><span>2019-05-28 12:12:45</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="p_12">
+		<a href="mall.html" class="confirm_btn">返回首页</a>
+	</div>
+
+</body>
+
+</html>

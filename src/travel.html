@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('public/meta.html')
+</head>
+
+<body class="">
+
+	@@include('public/top_box.html')
+	
+	@@include('public/search_box.html')
+	
+	<div class="p_12">
+		<div class="travel_banner bd_radius bg_cover" style="background-image: url(../img/banner.png);"></div>
+	</div>
+
+	<!-- 乡村旅游 -->
+	<a href="javascript:;" class="flex_between p_12 bg_white">
+		<div class="title_left am-text-lg">
+			乡村旅游
+		</div>
+	</a>
+
+	<div class="p_6">
+		<div class="am-g">
+			<div class="am-u-sm-6">
+				@@include('public/item_pic.html')
+				@@include('public/item_pic.html')
+				@@include('public/item_pic_square.html')
+			</div>
+			<div class="am-u-sm-6">
+				@@include('public/item_pic_only.html')
+				@@include('public/item_pic.html')
+				@@include('public/item_pic_only.html')
+			</div>
+		</div>
+	</div>
+
+	<!-- 旅拍发布 -->
+	<a class="am-block travel_icon" href="publish.html">
+		<img class="bd_radius_50 box_shadow" src="img/icon_add.png" width="50" height="50" alt="">
+	</a>
+
+</body>
+
+</html>

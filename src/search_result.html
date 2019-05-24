@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('public/meta.html')
+</head>
+
+<body class="">
+
+	<!-- 返回 -->
+	<div class="back_box">
+		搜索结果
+		<a class="back_icon" href="javascript:history.back(-1)">
+			<img src="img/icon_right.png" width="6" height="11" alt="">
+		</a>
+	</div>
+
+	<div class="am-g">
+		<div class="am-u-sm-6">
+			@@include('public/item_pic.html')
+		</div>
+		<div class="am-u-sm-6">
+			@@include('public/item_pic.html')
+		</div>
+		<div class="am-u-sm-6">
+			@@include('public/item_pic.html')
+		</div>
+	</div>
+
+	<!-- 没有内容时显示 -->
+	<div class="user_none" style="display: none;">
+		<img src="img/none_data.png" class="am-center" width="180" height="150" alt="">
+		<div class="am-text-center mar_btm_12 mar_top_12 am-text-sm">暂无搜索结果~</div>
+		<div class="am-text-center">
+			<a href="mall.html" class="am-btn am-btn-danger am-round">返回首页</a>
+		</div>		
+	</div>
+
+</body>
+
+</html>

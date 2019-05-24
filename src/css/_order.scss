@@ -1,0 +1,54 @@
+.order {
+	&_hd {
+		height: 46px;
+	}
+	&_item {
+		position: relative;
+		line-height: 46px;
+		text-align: center;
+		&.active {
+			color: $main-color;
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				display: block;
+				@include size(20px,2px);
+				background-color: $main-color;
+			}
+		}
+	}
+	&_menu {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		height: 50px;
+		border-bottom: $border;
+	}
+	&_single {
+		@include lineht(50px);
+		&.active {
+			border-bottom: 2px solid $main-color;
+		}
+	}
+	&_goods {
+		@extend .flex_normal;
+		padding: 12px;
+		background-color: $bg-color;
+		border-bottom: 1px solid $white-color;
+	}
+	&_wrap {
+		display: flex;
+		flex-direction: column;
+		height: 90px;
+	}
+	&_desc {
+		display: flex;
+		justify-content: space-between;
+	}
+	&_top {
+		
+	}
+}

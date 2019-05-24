@@ -1,0 +1,22 @@
+.assess {
+	&_list {
+		padding: 12px 0;
+	}
+	&_item {
+		margin-bottom: 12px;
+		font-size: 14px;
+		border-bottom: $border;
+		&:nth-last-child(1) {
+			margin-bottom: 0;
+		}
+	}
+	&_cont {
+		display: -webkit-box;
+		/* autoprefixer: off */
+		-webkit-box-orient: vertical;
+		/* autoprefixer: on */
+		-webkit-line-clamp: 2;
+		max-height: 52px;
+		overflow: hidden;
+	}
+}

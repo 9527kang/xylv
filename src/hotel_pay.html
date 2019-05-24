@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('public/meta.html')
+</head>
+
+<body class="bg_normal" style="padding-bottom:56px;">
+
+	<!-- 返回 -->
+	<div class="back_box">
+		酒店预订
+		<a class="back_icon" href="javascript:history.back(-1)">
+			<img src="img/icon_right.png" width="6" height="11" alt="">
+		</a>
+	</div>
+
+	<div class="pad_12 bd_btm_10 bg_white">
+		<div class="am-text-lg pd_12 bd_btm">精品酒店推荐</div>
+		<div class="pd_12">
+			<div class="flex_normal mar_btm_6">
+				入住<span class="mar_rt_12 col_nine">2019-05-15</span>离店<span
+					class="mar_rt_12 col_nine">2019-05-17</span>共2晚
+			</div>
+			<h6 class="mar_btm_6">郑州精品酒店</h6>
+			<div class="flex_between am-text-sm col_nine">
+				<span class="bd_all pad_6 bd_radius">不可取消</span>
+				<a class="flex_normal" href="javascript:;"
+					data-am-modal="{target: '#doc-modal-1', closeViaDimmer: 0, width: 300, height: 225}">
+					<span class="mar_rt_6">取消规则</span><span class="bd_radius_50 bg_normal col_white pad_6">?</span>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="bd_btm_10 bg_white">
+		<a href="javascript:;" class="fang_select p_12 bd_btm flex_between">
+			<h6>房间数</h6>
+			<div class="flex_normal">
+				<span class="fang_num col_nine mar_rt_12">1间</span><img src="img/icon_right.png" width="6" height="11"
+					alt="">
+			</div>
+		</a>
+
+		<a href="javascript:;" class="time_select p_12 flex_between">
+			<h6>到店时间</h6>
+			<div class="flex_normal">
+				<span class="time_on col_nine mar_rt_12">14:00</span><img src="img/icon_right.png" width="6" height="11"
+					alt="">
+			</div>
+		</a>
+	</div>
+
+	<div class="flex_normal p_12 bd_btm bg_white">
+		<label for="names" class="mar_rt_12">入住人</label>
+		<input type="text" id="names" class="flex_1 am-text-right lg" placeholder="需填1人姓名" required>
+	</div>
+
+	<div class="flex_normal p_12 bd_btm bg_white">
+		<label for="phones" class="mar_rt_12">联系手机</label>
+		<input id="phones" class="flex_1 am-text-right lg" type="number"
+			oninput="if(value.length>11)value=value.slice(0,11)" placeholder="请输入手机号码" required
+			onchange="validatemobile(this.value)" required>
+	</div>
+
+	<div class="hotel_fixed flex_normal bg_white bd_top">
+		<div class="pad_12 flex_1">
+			订单金额 ￥<span class="col_main am-text-lg font_bold">30.50</span>
+		</div>
+		<a id="qiang_gou" href="ticket_buy.html" class="am-btn am-btn-danger" style="line-height:36px;">去支付</a>
+	</div>
+
+	<!-- 模态窗背景 -->
+	<div class="common_bg" id="common_bg"></div>
+	<!-- 房间数列表 -->
+	<div class="fang_tan" id="fang_tan">
+		<label for="fang1" class="p_12 bd_btm flex_between">
+			<input type="radio" name="fangjian" id="fang1" checked><span>1间</span>
+		</label>
+		<label for="fang2" class="p_12 bd_btm flex_between">
+			<input type="radio" name="fangjian" id="fang2"><span>2间</span>
+		</label>
+		<label for="fang3" class="p_12 bd_btm flex_between">
+			<input type="radio" name="fangjian" id="fang3"><span>3间</span>
+		</label>
+		<div class="p_12">
+			<a id="fang_confirm" class="confirm_btn" href="javascript:;">确认</a>
+		</div>
+	</div>
+
+	<!-- 到店时间列表 -->
+	<div class="fang_tan" id="time_tan">
+		<label for="time1" class="p_12 bd_btm flex_between">
+			<input type="radio" name="shijian" id="time1" checked><span>14:00</span>
+		</label>
+		<label for="time2" class="p_12 bd_btm flex_between">
+			<input type="radio" name="shijian" id="time2"><span>16:00</span>
+		</label>
+		<label for="time3" class="p_12 bd_btm flex_between">
+			<input type="radio" name="shijian" id="time3"><span>18:00</span>
+		</label>
+		<div class="p_12">
+			<a id="time_confirm" class="confirm_btn" href="javascript:;">确认</a>
+		</div>
+	</div>
+
+	<!-- 取消规则弹窗 -->
+	<div class="am-modal am-modal-no-btn" tabindex="-1" id="doc-modal-1">
+		<div class="am-modal-dialog">
+			<div class="am-modal-hd">取消规则
+				<a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+			</div>
+			<div class="am-modal-bd am-text-left" style="height: 174px;overflow-y:scroll;">
+				取消规则内容展示
+			</div>
+		</div>
+	</div>
+
+	<script>
+		var one, two;
+		// 
+		class Popup {
+			constructor(panel, bg) {
+				this.panel = panel;
+				this.bg = bg;
+				this._init();
+			}
+			_init() {
+				this.bg.click(() => {
+					this._hide()
+				})
+			}
+			_show() {
+				this.bg.fadeIn()
+				this.panel.slideDown()
+			}
+			_hide(cb) {
+				this.bg.fadeOut()
+				this.panel.slideUp()
+				typeof cb === 'function' && cb()
+			}
+		}
+
+		$(function () {
+
+			one = new Popup($('#fang_tan'), $('#common_bg'));
+			two = new Popup($('#time_tan'), $('#common_bg'));
+
+			$('.fang_select').click(function () {
+				one._show();
+			})
+			$('#fang_confirm').click(function () {
+				one._hide(function () {
+					let fang_num = $('input[name=fangjian]:checked').next('span').text()
+					$('.fang_num').text(fang_num)
+				});
+			})
+
+			// time
+			$('.time_select').click(function () {
+				two._show();
+			})
+			$('#time_confirm').click(function () {
+				two._hide(function () {
+					let fang_num = $('input[name=shijian]:checked').next('span').text()
+					$('.time_on').text(fang_num)
+				});
+			})
+		})
+	</script>
+
+</body>
+
+</html>

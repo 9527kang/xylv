@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('public/meta.html')
+</head>
+
+<body class="bg_normal">
+
+	<!-- 返回 -->
+	<div class="back_box">
+		支付成功
+		<a class="back_icon" href="javascript:history.back(-1)">
+			<img src="img/icon_right.png" width="6" height="11" alt="">
+		</a>
+	</div>
+
+	<div class="user_top big bg_cover col_white" style="background-image: url(img/order_sucess.png)">
+		<div class="am-text-lg">支付成功-买家已付款</div>
+		<div class="am-text-sm">您的包裹正整装待发</div>
+	</div>
+
+	<div class="bg_white bd_btm_10">
+		<div class="p_12">待发货宝贝</div>
+		@@include('public/order_goods.html')
+		@@include('public/order_goods.html')
+
+		<div class="p_12 bd_btm am-text-right">
+			合计：<span class="col_main am-text-lg">￥56.89</span>
+		</div>
+
+	</div>
+
+	<div class="bg_white">
+		<div class="p_12">
+			<h6 class="mar_btm_6">订单信息</h6>
+			<ul class="am-text-sm col_nine">
+				<li class="flex_normal">
+					<span class="made_lb">订单号</span><span>20190528121245xxxx</span>
+				</li>
+				<li class="flex_normal">
+					<span class="made_lb">收货人</span><span>某某某</span>
+				</li>
+				<li class="flex_normal">
+					<span class="made_lb">订单金额</span><span class="col_main">￥56.89</span>
+				</li>
+				<li class="flex_normal">
+					<span class="made_lb">留言内容</span><span>客户暂无留言</span>
+				</li>
+				<li class="flex_normal">
+					<span class="made_lb">下单时间</span><span>2019-05-28 12:12:45</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="p_12">
+		<a href="mall.html" class="confirm_btn">返回首页</a>
+	</div>
+
+</body>
+
+</html>

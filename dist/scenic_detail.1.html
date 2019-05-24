@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<link rel="stylesheet" href="css/amazeui.min.css">
+<link rel="stylesheet" href="css/style.min.css">
+<link rel="stylesheet" href="css/scs.min.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/amazeui.min.js"></script>
+<script src="js/jquery.SuperSlide.2.1.3.js"></script>
+<script src="js/jquery.scs.min.js"></script>
+<script src="js/CNAddrArr.min.js"></script>
+<script src="js/myjs.js"></script>
+<title>象眼旅游</title>
+
+<script>
+// 获取当前城市及天气状态
+function showLocation(data) {
+    console.log(data.content.address_detail.city);
+}
+$.getScript("http://api.map.baidu.com/location/ip?ak=xgcQYOzqj6P60i5LZVLBVtVewQliPyXe&callback=showLocation");
+
+$.ajax({
+    type: 'GET',
+    url: 'https://www.tianqiapi.com/api/',
+    data: 'version=v1&style=1001&city=',
+    dataType: 'JSON',
+    error: function () {
+        alert('网络错误');
+    },
+    success: function (res) {
+        uptime = res.update_time.substring(11);
+        uptime = uptime.substring(0,uptime.length-3);
+       $('#weather').html('【' + res.city + '】' + res.data[0].wea + ' ' + res.data[0].tem1 + '/' + res.data[0].tem2);
+    }
+});
+
+</script>
+</head>
+
+<body class="" style="padding-bottom:180px;">
+
+	<!-- 公共顶部 -->
+<div class="top_box flex_between bg_white pad_12 bd_btm">
+	<a href="index.html">
+		<img src="img/logo.png" width="91" height="30" alt="">
+	</a>
+	<div class="am-text-sm col_main" id="weather"></div>
+</div>
+
+	<div class="scenic_box">
+		<div class="scenic_top col_white am-text-sm">
+			<div class="scenic_bg bg_cover" style="background-image: url(img/common_bg_pic.jpg);"></div>
+			<h2 class="mar_btm_6"><span class="mar_rt_12 am-text-lg font_bold">滇西密境大理丽</span>舒适</h2>
+			<div class="mar_btm_6"><span class="mar_rt_12">国家4A级旅游景区</span><span>开放时间：7:30-22:30</span></div>
+			<div class="mar_btm_12"><span class="mar_rt_12">实时人数：3999</span><span class="mar_rt_12">最佳容量：1.5万</span><span>最大容量：2.5万</span></div>
+			<div class="scenic_banner bg_cover bd_radius box_shadow" style="background-image:url(img/banner.png);">
+			</div>
+		</div>
+
+		<div class="bd_btm_10">
+			<div class="p_12">
+				<div class="scenic_intro flex_between mar_btm_6">
+					<h4>简介</h4>
+					<div class="flex_normal">
+						<span class="mar_rt_12 col_nine am-text-sm">展开</span><img class="icon" src="img/icon_right.png" width="6" height="11" alt="">
+					</div>
+				</div>
+				<div class="scenic_cont am-text-sm">
+					鸡蛋岛很适合小孩子或者不会游泳的人。海岸边及脚踝处鸡蛋岛很适合小孩子或者不会游泳的人。海岸边及脚踝处鸡蛋岛很适合小孩子或者不会游泳的人。海岸边及脚踝处鸡蛋岛很适合小孩子或者不会游泳的人。海岸边及脚踝处鸡蛋岛很适合小孩子或者不会游泳的人...
+				</div>
+			</div>
+		</div>
+
+		<!-- 地图显示 -->
+		<div class="p_12">
+			<iframe class="bd_radius" src="map.html" width="100%" height="100" frameborder="0"></iframe>
+		</div>
+
+		<div class="pad_12">
+			<a href="walk_through.html" class="flex_between mar_btm_12">
+				<h4>景区游玩攻略</h4>
+				<img src="img/icon_right.png" width="6" height="11" alt="">
+			</a>
+			<div class="flex_normal mar_btm_12">
+				<img class="box_shadow bd_radius mar_rt_12" src="img/common_pic.jpg" width="90" height="110" alt="">
+				<div class="flex_1">
+					<h5 class="am-text-truncate mar_btm_12">滇西密境大理丽</h5>
+					<div class="scenic_content am-text-sm">鸡蛋岛很适合小孩子或者不会游泳的人海岸边及脚踝处鸡蛋岛很适合小孩子或者不会游合小孩子或者不会游泳...</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="pad_12">
+			<a href="javascript:;" class="flex_between mar_btm_12">
+				<h4>游记推荐</h4>
+				<img src="img/icon_right.png" width="6" height="11" alt="">
+			</a>
+			<div class="am-g">
+				<div class="am-u-sm-6">
+					<div class="box_shadow bg_white bd_radius mar_btm_12">
+	<a href="travel_detail.html" class="am-block pic_big bg_cover" style="background-image: url(img/common_pic.jpg);"></a>
+	<div class="p_12">
+		<h3 class="pic_title am-text-sm mar_btm_6"><a href="travel_detail.html">鸡蛋岛很适合小孩子或者不会游泳的人。海岸边及脚踝处</a></h3>
+		<div class="flex_between">
+			<div class="flex_normal">
+				<img class="bd_radius_50 mar_rt_6" src="img/common_pic.jpg" width="20" height="20" alt="">
+				<span class="am-text-xs">课程表</span>
+			</div>
+			<div class="pic_zan am-text-xs">1451</div>
+		</div>
+	</div>
+</div>
+					<div class="box_shadow bg_white bd_radius mar_btm_12">
+	<a href="travel_detail.html" class="am-block square pic_big bg_cover" style="background-image: url(img/common_pic.jpg);"></a>
+	<div class="p_12">
+		<h3 class="pic_title am-text-sm mar_btm_6"><a href="travel_detail.html">鸡蛋岛很适合小孩子或者不会游泳的人。海岸边及脚踝处</a></h3>
+		<div class="flex_between">
+			<div class="flex_normal">
+				<img class="bd_radius_50 mar_rt_6" src="img/common_pic.jpg" width="20" height="20" alt="">
+				<span class="am-text-xs">课程表</span>
+			</div>
+			<div class="pic_zan am-text-xs">1451</div>
+		</div>
+	</div>
+</div>
+				</div>
+				<div class="am-u-sm-6">
+					<a href="travel_detail.html" class="am-block mar_btm_12 pic_big bg_cover box_shadow bd_radius" style="background-image: url(img/common_pic.jpg);">
+	<div class="pic_txt col_white am-text-center">
+		<h4 class="am-text-truncate mar_btm_6">记录乡村美一刻</h4>
+		<div class="am-text-truncate am-text-sm">好玩自然风景介绍</div>
+	</div>
+</a>
+					<div class="box_shadow bg_white bd_radius mar_btm_12">
+	<a href="travel_detail.html" class="am-block pic_big bg_cover" style="background-image: url(img/common_pic.jpg);"></a>
+	<div class="p_12">
+		<h3 class="pic_title am-text-sm mar_btm_6"><a href="travel_detail.html">鸡蛋岛很适合小孩子或者不会游泳的人。海岸边及脚踝处</a></h3>
+		<div class="flex_between">
+			<div class="flex_normal">
+				<img class="bd_radius_50 mar_rt_6" src="img/common_pic.jpg" width="20" height="20" alt="">
+				<span class="am-text-xs">课程表</span>
+			</div>
+			<div class="pic_zan am-text-xs">1451</div>
+		</div>
+	</div>
+</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="pad_12">
+			<a href="javascript:;" class="flex_between mar_btm_12">
+				<h4>玩转景区</h4>
+				<img src="img/icon_right.png" width="6" height="11" alt="">
+			</a>
+			<div class="am-g">
+				<div class="am-u-sm-6">
+					<a class="am-block mar_btm_12" href="javascript:;">
+	<div class="play_pic mar_btm_6 bd_radius bg_cover" style="background-image: url(img/banner.png);"><span
+			class="bd_radius col_white">玩转</span></div>
+	<h5 class="am-text-truncate mar_btm_6">景区深度玩法</h5>
+	<div class="am-text-sm col_nine">景区售票处>第一站>测试第二站（15分钟）>测试</div>
+</a>
+				</div>
+				<div class="am-u-sm-6">
+					<a class="am-block mar_btm_12" href="javascript:;">
+	<div class="play_pic mar_btm_6 bd_radius bg_cover" style="background-image: url(img/banner.png);"><span
+			class="bd_radius col_white">玩转</span></div>
+	<h5 class="am-text-truncate mar_btm_6">景区深度玩法</h5>
+	<div class="am-text-sm col_nine">景区售票处>第一站>测试第二站（15分钟）>测试</div>
+</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="p_12">
+			<div class="play_intro flex_between mar_btm_6">
+				<h4>景点我知道</h4>
+				<div class="flex_normal">
+					<span class="mar_rt_12 col_nine am-text-sm">展开</span><img class="icon" src="img/icon_right.png"
+						width="6" height="11" alt="">
+				</div>
+			</div>
+			<div class="play_cont am-text-sm">交通指南：岛很适合小孩子或者不会游泳的人。海岸边及脚踝鸡蛋岛很适合小孩子或者不会游泳...</div>
+		</div>
+
+		<div class="bd_btm_10">
+			<div class="p_12">
+				<div class="mar_btm_6">
+					<h4>支持服务</h4>
+				</div>
+				<div class="am-g am-text-sm">
+	<div class="am-u-sm-4">
+		<div class="flex_normal mar_btm_6">
+			<img class="mar_rt_6" src="img/icon_support_1.png" width="14" height="14" alt=""><span>免费WIFI</span>
+		</div>
+	</div>
+	<div class="am-u-sm-4">
+		<div class="flex_normal mar_btm_6">
+			<img class="mar_rt_6" src="img/icon_support_2.png" width="14" height="14" alt=""><span>智能停车场</span>
+		</div>
+	</div>
+	<div class="am-u-sm-4">
+		<div class="flex_normal mar_btm_6">
+			<img class="mar_rt_6" src="img/icon_support_3.png" width="14" height="14" alt=""><span>餐厅</span>
+		</div>
+	</div>
+	<div class="am-u-sm-4">
+		<div class="flex_normal mar_btm_6">
+			<img class="mar_rt_6" src="img/icon_support_4.png" width="14" height="14" alt=""><span>微信支付</span>
+		</div>
+	</div>
+	<div class="am-u-sm-4">
+		<div class="flex_normal mar_btm_6">
+			<img class="mar_rt_6" src="img/icon_support_5.png" width="14" height="14" alt=""><span>刷脸入园</span>
+		</div>
+	</div>
+	<div class="am-u-sm-4">
+		<div class="flex_normal mar_btm_6">
+			<img class="mar_rt_6" src="img/icon_support_6.png" width="14" height="14" alt=""><span>观光车</span>
+		</div>
+	</div>
+</div>
+			</div>
+		</div>
+
+		<div class="ticket_fixed p_12 bg_white">
+			<a href="javascript:;" class="flex_between mar_btm_12">
+				<h4>景区门票</h4>
+				<img src="img/icon_right.png" width="6" height="11" alt="">
+			</a>
+			<ul class="ticket_list">
+				<li class="ticket_item flex_normal mar_btm_12 col_white bd_radius">
+	<div class="ticket_lt p_12 flex_1">
+		<h4 class="am-text-truncate">滇西密境大理丽</h4>
+		<div class="am-text-sm">成人票</div>
+		<div class="ticket_btn transparent">可定今日票</div>
+	</div>
+	<div class="ticket_buy am-text-center">
+		<div class="ticket_price">￥<span class="am-text-xxl font_bold">68</span></div>
+		<a class="ticket_btn" href="ticket_buy.html">购买</a>
+	</div>
+</li>
+			</ul>
+		</div>
+
+	</div>
+
+	<script>
+		function showMore(ele1, ele2) {
+			if (ele1.hasClass('active') && ele2.hasClass('active')) {
+				ele1.removeClass('active')
+				ele1.find('span').html('展开')
+				ele2.removeClass('active')
+			} else {
+				ele1.addClass('active')
+				ele1.find('span').html('收起')
+				ele2.addClass('active')
+			}
+		}
+
+		$(function () {
+
+			// 简介
+			$('.scenic_intro').click(function () {
+				showMore($(this), $('.scenic_cont'))
+			})
+
+			// 景点我知道
+			$('.play_intro').click(function () {
+				showMore($(this), $('.play_cont'))
+			})
+			
+		})
+	</script>
+
+</body>
+
+</html>

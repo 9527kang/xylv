@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('public/meta.html')
+</head>
+
+<body class="">
+
+	<!-- 返回 -->
+	<div class="back_box">
+		领券中心
+		<a class="back_icon" href="javascript:history.back(-1)">
+			<img src="img/icon_right.png" width="6" height="11" alt="">
+		</a>
+	</div>
+
+	<div class="coupon_top bg_cover" style="background-image: url(img/mall_coupon_bg.png);"></div>
+
+	<div class="coupon_posi">
+
+		<div class="am-g mar_btm_12">
+			<div class="am-u-sm-4">
+				@@include('public/coupon_single.html')
+			</div>
+			<div class="am-u-sm-4">
+				@@include('public/coupon_single.html')
+			</div>
+			<div class="am-u-sm-4">
+				@@include('public/coupon_single.html')
+			</div>
+		</div>
+		
+		<div class="p_6">
+			<ul class="am-g">
+				<li class="am-u-sm-6">
+					@@include('public/goods_item.html')
+				</li>
+				<li class="am-u-sm-6">
+					@@include('public/goods_item.html')
+				</li>
+				<li class="am-u-sm-6">
+					@@include('public/goods_item.html')
+				</li>
+				<li class="am-u-sm-6">
+					@@include('public/goods_item.html')
+				</li>
+				<li class="am-u-sm-6">
+					@@include('public/goods_item.html')
+				</li>
+			</ul>
+		</div>
+
+	</div>
+
+</body>
+
+</html>

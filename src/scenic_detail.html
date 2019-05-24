@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('public/meta.html')
+</head>
+
+<body class="" style="padding-bottom:180px;">
+
+	@@include('public/top_box.html')
+
+	<div class="scenic_box">
+		<div class="scenic_top col_white am-text-sm">
+			<div class="scenic_bg bg_cover" style="background-image: url(img/common_bg_pic.jpg);"></div>
+			<h2 class="mar_btm_6"><span class="mar_rt_12 am-text-lg font_bold">滇西密境大理丽</span>舒适</h2>
+			<div class="mar_btm_6"><span class="mar_rt_12">国家4A级旅游景区</span><span>开放时间：7:30-22:30</span></div>
+			<div class="mar_btm_12"><span class="mar_rt_12">实时人数：3999</span><span class="mar_rt_12">最佳容量：1.5万</span><span>最大容量：2.5万</span></div>
+			<div class="scenic_banner bg_cover bd_radius box_shadow" style="background-image:url(img/banner.png);">
+			</div>
+		</div>
+
+		<div class="bd_btm_10">
+			<div class="p_12">
+				<div class="scenic_intro flex_between mar_btm_6">
+					<h4>简介</h4>
+					<div class="flex_normal">
+						<span class="mar_rt_12 col_nine am-text-sm">展开</span><img class="icon" src="img/icon_right.png" width="6" height="11" alt="">
+					</div>
+				</div>
+				<div class="scenic_cont am-text-sm">
+					鸡蛋岛很适合小孩子或者不会游泳的人。海岸边及脚踝处鸡蛋岛很适合小孩子或者不会游泳的人。海岸边及脚踝处鸡蛋岛很适合小孩子或者不会游泳的人。海岸边及脚踝处鸡蛋岛很适合小孩子或者不会游泳的人。海岸边及脚踝处鸡蛋岛很适合小孩子或者不会游泳的人...
+				</div>
+			</div>
+		</div>
+
+		<!-- 地图显示 -->
+		<div class="p_12">
+			<iframe class="bd_radius" src="map.html" width="100%" height="100" frameborder="0"></iframe>
+		</div>
+
+		<div class="pad_12">
+			<a href="walk_through.html" class="flex_between mar_btm_12">
+				<h4>景区游玩攻略</h4>
+				<img src="img/icon_right.png" width="6" height="11" alt="">
+			</a>
+			<a href="walk_through.html" class="flex_normal mar_btm_12">
+				<img class="box_shadow bd_radius mar_rt_12" src="img/common_pic.jpg" width="90" height="110" alt="">
+				<div class="flex_1">
+					<h5 class="am-text-truncate mar_btm_12">滇西密境大理丽</h5>
+					<div class="scenic_content am-text-sm">鸡蛋岛很适合小孩子或者不会游泳的人海岸边及脚踝处鸡蛋岛很适合小孩子或者不会游合小孩子或者不会游泳...</div>
+				</div>
+			</a>
+		</div>
+
+		<div class="pad_12">
+			<a href="javascript:;" class="flex_between mar_btm_12">
+				<h4>游记推荐</h4>
+				<!-- <img src="img/icon_right.png" width="6" height="11" alt=""> -->
+			</a>
+			<div class="am-g">
+				<div class="am-u-sm-6">
+					@@include('public/item_pic.html')
+					@@include('public/item_pic_square.html')
+				</div>
+				<div class="am-u-sm-6">
+					@@include('public/item_pic_only.html')
+					@@include('public/item_pic.html')
+				</div>
+			</div>
+		</div>
+
+		<div class="pad_12">
+			<a href="javascript:;" class="flex_between mar_btm_12">
+				<h4>玩转景区</h4>
+				<!-- <img src="img/icon_right.png" width="6" height="11" alt=""> -->
+			</a>
+			<div class="am-g">
+				<div class="am-u-sm-6">
+					@@include('public/play_item.html')
+				</div>
+				<div class="am-u-sm-6">
+					@@include('public/play_item.html')
+				</div>
+			</div>
+		</div>
+
+		<div class="p_12">
+			<div class="play_intro flex_between mar_btm_6">
+				<h4>景点我知道</h4>
+				<div class="flex_normal">
+					<span class="mar_rt_12 col_nine am-text-sm">展开</span><img class="icon" src="img/icon_right.png" width="6" height="11" alt="">
+				</div>
+			</div>
+			<div class="play_cont am-text-sm">交通指南：岛很适合小孩子或者不会游泳的人。海岸边及脚踝鸡蛋岛很适合小孩子或者不会游泳...</div>
+		</div>
+
+		<div class="bd_btm_10">
+			<div class="p_12">
+				<div class="mar_btm_6">
+					<h4>支持服务</h4>
+				</div>
+				@@include('public/equip_list.html')
+			</div>
+		</div>
+
+		<div class="ticket_fixed p_12 bg_white">
+			<a href="javascript:;" class="flex_between mar_btm_12">
+				<h4>景区门票</h4>
+				<!-- <img src="img/icon_right.png" width="6" height="11" alt=""> -->
+			</a>
+			<ul class="ticket_list">
+				@@include('public/ticket_item.html')
+			</ul>
+		</div>
+
+	</div>
+
+	<script>
+		function showMore(ele1, ele2) {
+			if (ele1.hasClass('active') && ele2.hasClass('active')) {
+				ele1.removeClass('active')
+				ele1.find('span').html('展开')
+				ele2.removeClass('active')
+			} else {
+				ele1.addClass('active')
+				ele1.find('span').html('收起')
+				ele2.addClass('active')
+			}
+		}
+
+		$(function () {
+
+			// 简介
+			$('.scenic_intro').click(function () {
+				showMore($(this), $('.scenic_cont'))
+			})
+
+			// 景点我知道
+			$('.play_intro').click(function () {
+				showMore($(this), $('.play_cont'))
+			})
+			
+		})
+	</script>
+
+</body>
+
+</html>

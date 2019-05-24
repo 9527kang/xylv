@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('public/meta.html')
+</head>
+
+<body class="bg_normal">
+
+	@@include('public/top_box.html')
+
+	<form action="#">
+		
+		<div class="bg_white">
+			<img src="img/feed_bg.png" width="100%" alt="">
+		</div>
+		
+		<div class="bd_btm_10">
+			<div class="p_12 bg_white">
+				<h6 class="mar_btm_12">问题描述</h6>
+				<ul class="flex_normal flex_wrap am-text-sm">
+					<li class="feed_item active">功能异常</li>
+					<li class="feed_item">体验问题</li>
+					<li class="feed_item">其他问题</li>
+				</ul>
+				<textarea class="feed_area bg_white" placeholder="请您输入对我们的建议或意见..." required></textarea>
+			</div>
+		</div>
+
+		<div class="p_12 flex_normal bg_white">
+			<label class="mar_rt_12" for="in_tel">联系方式</label>
+			<input type="number" class="flex_1" id="in_tel" placeholder="请输入手机号码~" required oninput="if(value.length>11)value=value.slice(0,11)" onchange="validatemobile(this.value)">
+		</div>
+
+		<div class="confirm_wrap p_12">
+			<button class="confirm_btn" id="confirm_btn" type="submit">确认</button>
+		</div>
+	</form>
+
+	<script>
+		$(function(){
+			$('.feed_item').click(function(){
+				switchClas($(this),'active')
+			})
+		})
+	</script>
+
+</body>
+
+</html>

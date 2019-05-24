@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('public/meta.html')
+</head>
+
+<body class="">
+
+	@@include('public/top_box.html')
+
+	<ul class="order_hd flex_around bd_btm">
+		<li class="order_item active tab_item">全部</li>
+		<li class="order_item tab_item">已使用</li>
+		<li class="order_item tab_item">未使用</li>
+	</ul>
+
+	<div class="tab_wrap">
+		<div class="tab_cont active">
+			<ul class="coupon_list">
+				@@include('public/coupon_none.html')
+				@@include('public/coupon_use.html')
+				@@include('public/coupon_none.html')
+				@@include('public/coupon_use.html')
+			</ul>
+		</div>
+		<div class="tab_cont">
+			<ul class="coupon_list">
+				@@include('public/coupon_use.html')
+				@@include('public/coupon_use.html')
+			</ul>
+		</div>
+		<div class="tab_cont">
+			<ul class="coupon_list">
+				@@include('public/coupon_none.html')
+				@@include('public/coupon_none.html')
+			</ul>
+		</div>
+	</div>
+
+	<div class="no_data">没有更多优惠券~</div>
+
+</body>
+
+</html>

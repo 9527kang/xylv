@@ -1,0 +1,19 @@
+.dope {
+	&_ling {
+		display: block;
+		height: 110px;
+	}
+	&_top {
+		height: 100px;
+		color: $white-color;
+		background: url(../img/dope_bg.png) no-repeat center;
+		background-size: cover;
+	}
+	&_num {
+		width: 120px;
+		height: 80px;
+		padding-top: 16px;
+		text-align: center;
+		border-right: 1px solid $white-color;
+	}
+}

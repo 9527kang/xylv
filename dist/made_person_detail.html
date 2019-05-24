@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<link rel="stylesheet" href="css/amazeui.min.css">
+<link rel="stylesheet" href="css/style.min.css">
+<link rel="stylesheet" href="css/scs.min.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/amazeui.min.js"></script>
+<script src="js/jquery.SuperSlide.2.1.3.js"></script>
+<script src="js/jquery.scs.min.js"></script>
+<script src="js/CNAddrArr.min.js"></script>
+<script src="js/myjs.js"></script>
+<title>象眼旅游</title>
+
+<script>
+// 获取当前城市及天气状态
+function showLocation(data) {
+    console.log(data.content.address_detail.city);
+}
+$.getScript("http://api.map.baidu.com/location/ip?ak=xgcQYOzqj6P60i5LZVLBVtVewQliPyXe&callback=showLocation");
+
+$.ajax({
+    type: 'GET',
+    url: 'https://www.tianqiapi.com/api/',
+    data: 'version=v1&style=1001&city=',
+    dataType: 'JSON',
+    error: function () {
+        alert('网络错误');
+    },
+    success: function (res) {
+        uptime = res.update_time.substring(11);
+        uptime = uptime.substring(0,uptime.length-3);
+       $('#weather').html('【' + res.city + '】' + res.data[0].wea + ' ' + res.data[0].tem1 + '/' + res.data[0].tem2);
+    }
+});
+
+</script>
+</head>
+
+<body class="bg_normal">
+
+	<!-- 公共顶部 -->
+<div class="top_box flex_between bg_white pad_12 bd_btm">
+	<a href="index.html">
+		<img src="img/logo.png" width="91" height="30" alt="">
+	</a>
+	<div class="am-text-sm col_main" id="weather"></div>
+</div>
+
+	<div class="made_top">
+		<div class="am-text-xl font_bold">个性定制·品质出行</div>
+		<div class="am-text-sm">填写需求/确认行程/欢乐出游</div>
+	</div>
+
+	<div class="made_box">
+		<div class="flex_between bd_btm pad_btm_12">
+			<input class="am-text-left flex_1 lg" type="text" value="郑州" readonly>
+			<img src="img/icon_to.png" width="18" height="7" alt="">
+			<input class="am-text-right flex_1 lg" value="黄山" type="text" readonly>
+		</div>
+		<div class="flex_between bd_btm pd_12">
+			<input class="am-text-left flex_1 lg" type="text" value="2019-05-14" readonly>
+			<input type="text" value="4天" class="am-text-center flex_1 lg" readonly>
+			<input class="am-text-right flex_1 lg" type="text" value="2019-05-18" readonly>
+		</div>
+		<div class="font_bold pd_12 bd_btm">2成人0儿童</div>
+		<div class="pd_12 bd_btm">
+			<input class="lg" type="text" value="200元" readonly>
+		</div>
+		<div class="bd_btm pd_12">
+			<h6 class="am-text-sm col_nine mar_btm_12">需要提供什么？（多选）</h6>
+			<ul class="flex_normal flex_wrap am-text-sm">
+				<li class="feed_item active">线路设计</li>
+				<li class="feed_item active">机票</li>
+			</ul>
+		</div>
+		<div class="bd_btm pd_12">
+			<h6 class="am-text-sm col_nine mar_btm_12">备注</h6>
+			<textarea class="am-block bg_normal p_12" style="height:120px;" readonly>定制备注内容定制备注内容</textarea>
+		</div>
+		<div class="pd_12 bd_btm">
+			<input class="lg" type="text" value="某某某" readonly>
+		</div>
+		<div class="pd_12 bd_btm">
+			<input class="lg" value="150xxxxxxxx" readonly>
+		</div>
+		<div class="pd_12 bd_btm">
+			<input class="lg" type="text" value="微信号昵称" readonly>
+		</div>
+	</div>
+
+</body>
+
+</html>

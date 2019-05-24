@@ -1,0 +1,161 @@
+//宽高
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin lineht($ht) {
+    height: $ht;
+    line-height: $ht;
+}
+
+//背景
+@mixin bg($url,$size) {
+    background: url($url);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: $size;
+}
+
+//定位
+@mixin position($left: 0, $top: 0, $posi: absolute) {
+    position: $posi;
+    left: $left;
+    top: $top;
+}
+
+//文本段落限制
+@mixin rowhide($num, $lht) {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* autoprefixer: off */
+    -webkit-box-orient: vertical;
+    /* autoprefixer: on */
+    -webkit-line-clamp: $num;
+    line-height: $lht;
+    height: $lht*$num;
+}
+
+//伪类
+@mixin after($cont, $color,$bgcolor, $display: inline-block) {
+    &:after {
+        content: $cont;
+        display: $display;
+        color: $color;
+        background-color: $bgcolor;
+    }
+}
+
+//伪类
+@mixin before($cont, $color,$bgcolor, $display: inline-block) {
+    &:before {
+        content: $cont;
+        display: $display;
+        color: $color;
+        background-color: $bgcolor;
+    }
+}
+
+//背景色和字体颜色
+@mixin colbg($color, $bgc) {
+    color: $color;
+    background-color: $bgc;
+}
+
+//按钮
+@mixin btn($width, $ht, $color, $radius) {
+    display: block;
+    width: $width;
+    height: $ht;
+    line-height: $ht;
+    text-align: center;
+    background-color: #fff;
+    color: $color;
+    border-radius: $radius;
+}
+
+@mixin inline-btn($width, $ht, $color,$radius: 0px) {
+    display: inline-block;
+    width: $width;
+    height: $ht;
+    line-height: $ht;
+    text-align: center;
+    background-color: $color;
+    color: $white-color;
+    border-radius: $radius;
+    font-size: 12px;
+}
+
+@mixin bigbtn($width,$ht,$bg-color,$color,$bds) {
+    display: block;
+    width: $width;
+    height: $ht;
+    line-height: $ht;
+    background-color: $bg-color;
+    color: $color;
+    text-align: center;
+    border-radius: $bds;
+}
+
+@mixin transparentbtn($width,$ht,$bd-color,$bg-color,$color,$radius) {
+    display: block;
+    width: $width;
+    height: $ht;
+    line-height: ($ht)-2px;
+    border: 1px solid $bd-color;
+    background-color: $bg-color;
+    text-align: center;
+    color: $color;
+    border-radius: $radius;
+}
+
+//雪碧图
+@mixin bgpic($num) {
+    @for $i from 1 through $num {
+        &:nth-child(#{$i}) {
+            @if $i==1 {
+                background-position: 2px -46px;
+            }
+            @else {
+                background-position: -($i*240-240+2px) -46px;
+            }
+            &:hover {
+                transition: all .6s;
+                @if $i==1 {
+                    background-position: 2px -246px;
+                }
+                @else {
+                    background-position: -($i*240-240+2px) -246px;
+                }
+            }
+        }
+    }
+}
+
+//占位样式
+@mixin placehold($color,$size:14px) {
+    &::-webkit-input-placeholder {
+        color: $color;
+        font-family: "微软雅黑";
+        font-size: $size;
+    }
+    &::-moz-placeholder {
+        color: $color;
+        font-family: "微软雅黑";
+        font-size: $size;
+    }
+    &::-ms-input-placeholder {
+        color: $color;
+        font-family: "微软雅黑";
+        font-size: $size;
+    }
+}
+
+// 鼠标经过换背景色
+@mixin bgchange {
+    &:hover {
+        background-color: lighten($main-color,15%);
+        color: $white-color;
+    }
+}

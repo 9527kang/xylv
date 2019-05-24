@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<link rel="stylesheet" href="css/amazeui.min.css">
+<link rel="stylesheet" href="css/style.min.css">
+<link rel="stylesheet" href="css/scs.min.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/amazeui.min.js"></script>
+<script src="js/jquery.SuperSlide.2.1.3.js"></script>
+<script src="js/jquery.scs.min.js"></script>
+<script src="js/CNAddrArr.min.js"></script>
+<script src="js/myjs.js"></script>
+<title>象眼旅游</title>
+
+<script>
+// 获取当前城市及天气状态
+function showLocation(data) {
+    console.log(data.content.address_detail.city);
+}
+$.getScript("http://api.map.baidu.com/location/ip?ak=xgcQYOzqj6P60i5LZVLBVtVewQliPyXe&callback=showLocation");
+
+$.ajax({
+    type: 'GET',
+    url: 'https://www.tianqiapi.com/api/',
+    data: 'version=v1&style=1001&city=',
+    dataType: 'JSON',
+    error: function () {
+        alert('网络错误');
+    },
+    success: function (res) {
+        uptime = res.update_time.substring(11);
+        uptime = uptime.substring(0,uptime.length-3);
+       $('#weather').html('【' + res.city + '】' + res.data[0].wea + ' ' + res.data[0].tem1 + '/' + res.data[0].tem2);
+    }
+});
+
+</script>
+</head>
+
+<body class="">
+
+	<!-- 返回 -->
+	<div class="back_box">
+		领券中心
+		<a class="back_icon" href="javascript:history.back(-1)">
+			<img src="img/icon_right.png" width="6" height="11" alt="">
+		</a>
+	</div>
+
+	<div class="coupon_top bg_cover" style="background-image: url(img/mall_coupon_bg.png);"></div>
+
+	<div class="coupon_posi">
+
+		<div class="am-g mar_btm_12">
+			<div class="am-u-sm-4">
+				<div class="coupon_single">
+	<h5>100</h5>
+	<div class="">满199元可用</div>
+	<div class="coupon_zhuan">郑州大酒店预订专用券</div>
+	<a class="coupon_get" href="javascript:;">立即领取</a>
+</div>
+			</div>
+			<div class="am-u-sm-4">
+				<div class="coupon_single">
+	<h5>100</h5>
+	<div class="">满199元可用</div>
+	<div class="coupon_zhuan">郑州大酒店预订专用券</div>
+	<a class="coupon_get" href="javascript:;">立即领取</a>
+</div>
+			</div>
+			<div class="am-u-sm-4">
+				<div class="coupon_single">
+	<h5>100</h5>
+	<div class="">满199元可用</div>
+	<div class="coupon_zhuan">郑州大酒店预订专用券</div>
+	<a class="coupon_get" href="javascript:;">立即领取</a>
+</div>
+			</div>
+		</div>
+		
+		<div class="p_6">
+			<ul class="am-g">
+				<li class="am-u-sm-6">
+					<div class="goods_item">
+	<a href="goods_detail.html" class="goods_pic" style="background-image: url(img/goods_pic.png);"></a>
+	<div class="goods_wrap">
+		<a href="goods_detail.html" class="goods_title">商品名称参数等一系列的描述显示</a>
+		<div class="goods_flex">
+			<span class="goods_price">￥299.00</span>
+			<a class="goods_btn" href="javascript:;">马上抢</a>
+		</div>
+	</div>
+</div>
+				</li>
+				<li class="am-u-sm-6">
+					<div class="goods_item">
+	<a href="goods_detail.html" class="goods_pic" style="background-image: url(img/goods_pic.png);"></a>
+	<div class="goods_wrap">
+		<a href="goods_detail.html" class="goods_title">商品名称参数等一系列的描述显示</a>
+		<div class="goods_flex">
+			<span class="goods_price">￥299.00</span>
+			<a class="goods_btn" href="javascript:;">马上抢</a>
+		</div>
+	</div>
+</div>
+				</li>
+				<li class="am-u-sm-6">
+					<div class="goods_item">
+	<a href="goods_detail.html" class="goods_pic" style="background-image: url(img/goods_pic.png);"></a>
+	<div class="goods_wrap">
+		<a href="goods_detail.html" class="goods_title">商品名称参数等一系列的描述显示</a>
+		<div class="goods_flex">
+			<span class="goods_price">￥299.00</span>
+			<a class="goods_btn" href="javascript:;">马上抢</a>
+		</div>
+	</div>
+</div>
+				</li>
+				<li class="am-u-sm-6">
+					<div class="goods_item">
+	<a href="goods_detail.html" class="goods_pic" style="background-image: url(img/goods_pic.png);"></a>
+	<div class="goods_wrap">
+		<a href="goods_detail.html" class="goods_title">商品名称参数等一系列的描述显示</a>
+		<div class="goods_flex">
+			<span class="goods_price">￥299.00</span>
+			<a class="goods_btn" href="javascript:;">马上抢</a>
+		</div>
+	</div>
+</div>
+				</li>
+				<li class="am-u-sm-6">
+					<div class="goods_item">
+	<a href="goods_detail.html" class="goods_pic" style="background-image: url(img/goods_pic.png);"></a>
+	<div class="goods_wrap">
+		<a href="goods_detail.html" class="goods_title">商品名称参数等一系列的描述显示</a>
+		<div class="goods_flex">
+			<span class="goods_price">￥299.00</span>
+			<a class="goods_btn" href="javascript:;">马上抢</a>
+		</div>
+	</div>
+</div>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+
+</body>
+
+</html>

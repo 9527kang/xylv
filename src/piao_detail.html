@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('public/meta.html')
+	<script src="js/countDown.js"></script>
+</head>
+
+<body class="" style="padding-bottom:56px;">
+
+	@@include('public/top_box.html')
+
+	<div class="scenic_box">
+		<div class="scenic_top col_white am-text-sm">
+			<div class="scenic_bg bg_cover" style="background-image: url(img/common_bg_pic.jpg);"></div>
+			<h2 class="mar_btm_6"><span class="mar_rt_12 am-text-lg font_bold">滇西密境大理丽</span>舒适</h2>
+			<div class="mar_btm_6"><span class="mar_rt_12">国家4A级旅游景区</span><span>开放时间：7:30-22:30</span></div>
+			<div class="mar_btm_12"><span class="mar_rt_12">实时人数：3999</span><span class="mar_rt_12">最佳容量：1.5万</span><span>最大容量：2.5万</span></div>
+			<div class="scenic_banner bg_cover bd_radius box_shadow" style="background-image:url(img/banner.png);">
+			</div>
+		</div>
+
+		<div class="piao_bg flex_between p_12 col_white">
+			<div>￥<span class="am-text-xl mar_rt_6">429</span>起</div>
+			<div>3-10人</div>
+		</div>
+
+		<div class="p_12">
+			<h6 class="mar_btm_12">湿地公园超值票团购 速来抢购</h6>
+			<div class="flex_between mar_btm_12 am-text-sm">
+				<div>活动进度<span class="mar_lt_6 col_main">50%</span></div>
+				<div>仅剩666名额</div>
+			</div>
+			<div class="am-progress am-progress-striped"
+				style="border-radius:200px;overflow:hidden;height: 14px;margin-bottom: 0;">
+				<div class="am-progress-bar am-progress-bar-danger" style="width: 50%"></div>
+			</div>
+		</div>
+
+		<div class="piao_all bd_btm pad_12 flex_between pad_btm_12" data-am-modal="{target: '#doc-modal-1', closeViaDimmer: 0, width: 350}">
+			<h5>6人在拼单，可直接参与</h5>
+			<div class="flex_normal">
+				<span class="mar_rt_12 am-text-sm">全部</span><img src="img/icon_right.png" width="6" height="11" alt="">
+			</div>
+		</div>
+
+		<ul>
+			<li class="bd_btm p_12 flex_between">
+				<div class="flex_normal">
+					<img class="bd_radius_50 mar_rt_12" src="img/thumb.png" width="36" height="36" alt=""><span>某某某</span>
+				</div>
+				<div class="flex_normal">
+					<div class="am-text-right am-text-sm">
+						<div>还差<span class="col_main">1人</span>拼成</div>
+						<div class="count_down">剩余<span class="hour_num">00</span>:<span class="min_num">00</span>:<span class="sec_num">00</span></div>
+					</div>
+					<a href="piao_pin.html" class="am-btn am-btn-danger bd_radius mar_lt_12">去拼单</a>
+				</div>
+			</li>
+			<li class="bd_btm p_12 flex_between">
+				<div class="flex_normal">
+					<img class="bd_radius_50 mar_rt_12" src="img/thumb.png" width="36" height="36" alt=""><span>某某某</span>
+				</div>
+				<div class="flex_normal">
+					<div class="am-text-right am-text-sm">
+						<div>还差<span class="col_main">1人</span>拼成</div>
+						<div class="count_down_1">剩余<span class="hour_num_1">00</span>:<span class="min_num_1">00</span>:<span class="sec_num_1">00</span></div>
+					</div>
+					<a href="piao_pin.html" class="am-btn am-btn-danger bd_radius mar_lt_12">去拼单</a>
+				</div>
+			</li>
+		</ul>
+
+
+
+		<div class="bd_btm_10">
+			<div class="p_12">
+				<div class="scenic_intro flex_between mar_btm_6">
+					<h4>简介</h4>
+					<div class="flex_normal">
+						<span class="mar_rt_12 col_nine am-text-sm">展开</span><img class="icon" src="img/icon_right.png" width="6" height="11" alt="">
+					</div>
+				</div>
+				<div class="scenic_cont am-text-sm">
+					鸡蛋岛很适合小孩子或者不会游泳的人。海岸边及脚踝处鸡蛋岛很适合小孩子或者不会游泳的人。海岸边及脚踝处鸡蛋岛很适合小孩子或者不会游泳的人。海岸边及脚踝处鸡蛋岛很适合小孩子或者不会游泳的人。海岸边及脚踝处鸡蛋岛很适合小孩子或者不会游泳的人...
+				</div>
+			</div>
+		</div>
+
+		<!-- 地图显示 -->
+		<div class="p_12">
+			<iframe class="bd_radius" src="map.html" width="100%" height="100" frameborder="0"></iframe>
+		</div>
+
+		<div class="bd_btm_10">
+			<div class="pad_12">
+				<h4>团购详情</h4>
+			</div>
+			<div class="detail_box">
+				<p>地址：河南省郑州市金水区花园路国基路</p>
+				<p>电话：×××-××××-×××</p>
+			</div>
+		</div>
+
+		<div class="hotel_fixed flex_normal bg_white bd_top">
+			<div class="pad_12 flex_1">
+				湿地公园门票抢购 ￥<span class="col_main am-text-lg font_bold">425.00</span>
+			</div>
+			<a id="qiang_gou" href="javascript:;" class="am-btn am-btn-danger" style="line-height:36px;">发起拼团</a>
+		</div>
+
+	</div>
+
+	<!-- 抢购弹窗 -->
+	<div class="common_bg" id="gou_bg"></div>
+	<div class="hotel_tan bg_white p_12" id="hotel_tan">
+
+		<form action="#">
+			<div class="flex_normal pd_12 bd_btm mar_btm_12">
+				<div class="hotel_piao mar_rt_12 bg_cover" style="background-image:url(img/banner.png);"></div>
+				<div class="flex_1">
+					<div class="hotel_wrap">
+						<h3 class="am-text-truncate">福照楼汽锅鸡饭店</h3>
+						<div class="flex_1 am-text-sm col_nine">(周末及节假日)门票团购抢购</div>
+						<div class="flex_between">
+							<span class="col_deputy">抢购</span>
+							<div class="col_main mar_rt_6 am-text-default">￥66.00</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="mar_btm_12 bd_btm">
+				<h6 class="mar_btm_12">种类</h6>
+				<ul class="flex_normal flex_wrap am-text-sm">
+					<li class="feed_item active">3-5人</li>
+					<li class="feed_item">7-9人</li>
+					<li class="feed_item">10人以上</li>
+				</ul>
+			</div>
+
+			<div class="flex_between mar_btm_12">
+				<h6>购买数量</h6>
+				@@include('public/num_item.html')
+			</div>
+
+			<button class="am-btn am-btn-danger am-block am-round" style="width:100%;">立即购买</button>
+
+		</form>
+
+		<img class="hotel_close" id="hotel_close" src="img/icon_tan_close.png" width="20" height="20" alt="">
+
+	</div>
+
+	<!-- 全部拼单弹窗 -->
+	<div class="am-modal am-modal-no-btn" tabindex="-1" id="doc-modal-1">
+		<div class="am-modal-dialog bd_radius">
+			<div class="am-modal-hd">当前所有拼单
+				<a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+			</div>
+			<ul style="padding:12px 0;max-height:240px;overflow-y:scroll;">
+				<li class="p_12 bd_btm flex_between">
+					<div class="flex_normal">
+						<img class="bd_radius_50 mar_rt_12" src="img/thumb.png" width="36" height="36" alt="">
+						<div class="am-text-left am-text-sm">
+							<h6><span class="mar_rt_6 am-text-default">某某某</span>还差<span class="col_main">1人</span></h6>
+							<div class="count_down_1">剩余<span class="hour_num_1">00</span>:<span class="min_num_1">00</span>:<span class="sec_num_1">00</span></div>
+						</div>
+					</div>
+					<a href="piao_pin.html" class="am-btn am-btn-danger bd_radius mar_lt_12">去拼单</a>
+				</li>
+				<li class="p_12 bd_btm flex_between">
+					<div class="flex_normal">
+						<img class="bd_radius_50 mar_rt_12" src="img/thumb.png" width="36" height="36" alt="">
+						<div class="am-text-left am-text-sm">
+							<h6><span class="mar_rt_6 am-text-default">某某某</span>还差<span class="col_main">1人</span></h6>
+							<div class="count_down">剩余<span class="hour_num">00</span>:<span class="min_num">00</span>:<span class="sec_num">00</span></div>
+						</div>
+					</div>
+					<a href="piao_pin.html" class="am-btn am-btn-danger bd_radius mar_lt_12">去拼单</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	@@include('public/num_js.html')
+
+	<script>
+		function showMore(ele1, ele2) {
+			if (ele1.hasClass('active') && ele2.hasClass('active')) {
+				ele1.removeClass('active')
+				ele1.find('span').html('展开')
+				ele2.removeClass('active')
+			} else {
+				ele1.addClass('active')
+				ele1.find('span').html('收起')
+				ele2.addClass('active')
+			}
+		}
+
+		$(function () {			
+
+			// 简介
+			$('.scenic_intro').click(function () {
+				showMore($(this), $('.scenic_cont'))
+			})
+
+			// 种类切换
+			$('.feed_item').click(function () {
+				switchClas($(this), 'active')
+			})
+
+			// 立即抢购弹窗
+			$('#qiang_gou').click(function () {
+				$('#hotel_tan').slideDown()
+				$('#gou_bg').fadeIn()
+			})
+
+			$('#gou_bg').click(function () {
+				$(this).fadeOut()
+				$('#hotel_tan').slideUp()
+			})
+
+			$('#hotel_close').click(function () {
+				$('#gou_bg').fadeOut()
+				$('#hotel_tan').slideUp()
+			})
+
+
+			//倒计时
+			$(".count_down").countDown({
+				endTimeStr: '2019/07/16 19:00:00', //结束时间
+				daySelector: ".day_num",
+				hourSelector: ".hour_num",
+				minSelector: ".min_num",
+				secSelector: ".sec_num"
+			})
+
+			$(".count_down_1").countDown({
+				endTimeStr: '2019/07/16 12:59:23', //结束时间
+				daySelector: ".day_num_1",
+				hourSelector: ".hour_num_1",
+				minSelector: ".min_num_1",
+				secSelector: ".sec_num_1"
+			})
+
+
+		})
+	</script>
+
+</body>
+
+</html>

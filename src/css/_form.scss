@@ -1,0 +1,10 @@
+.form {
+	&_group {
+		padding: 12px;
+		border-bottom: $border;
+	}
+	&_forget {
+		text-decoration: underline;
+		color: $six-color;
+	}
+}

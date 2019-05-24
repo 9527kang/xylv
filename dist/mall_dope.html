@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<link rel="stylesheet" href="css/amazeui.min.css">
+<link rel="stylesheet" href="css/style.min.css">
+<link rel="stylesheet" href="css/scs.min.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/amazeui.min.js"></script>
+<script src="js/jquery.SuperSlide.2.1.3.js"></script>
+<script src="js/jquery.scs.min.js"></script>
+<script src="js/CNAddrArr.min.js"></script>
+<script src="js/myjs.js"></script>
+<title>象眼旅游</title>
+
+<script>
+// 获取当前城市及天气状态
+function showLocation(data) {
+    console.log(data.content.address_detail.city);
+}
+$.getScript("http://api.map.baidu.com/location/ip?ak=xgcQYOzqj6P60i5LZVLBVtVewQliPyXe&callback=showLocation");
+
+$.ajax({
+    type: 'GET',
+    url: 'https://www.tianqiapi.com/api/',
+    data: 'version=v1&style=1001&city=',
+    dataType: 'JSON',
+    error: function () {
+        alert('网络错误');
+    },
+    success: function (res) {
+        uptime = res.update_time.substring(11);
+        uptime = uptime.substring(0,uptime.length-3);
+       $('#weather').html('【' + res.city + '】' + res.data[0].wea + ' ' + res.data[0].tem1 + '/' + res.data[0].tem2);
+    }
+});
+
+</script>
+</head>
+
+<body class="">
+
+	<!-- 返回 -->
+	<div class="back_box">
+		积分商城
+		<a class="back_icon" href="javascript:history.back(-1)">
+			<img src="img/icon_right.png" width="6" height="11" alt="">
+		</a>
+	</div>
+
+	<div class="dope_top flex_normal">
+		<div class="dope_num">
+			<div class="am-text-xl mar_btm_6" style="line-height: 1;">0</div>
+			<div class="">积分</div>
+		</div>
+		<div class="am-g flex_1">
+			<div class="am-u-sm-6 am-text-center">
+				<a href="dope_list.html" class="am-block">
+					<h6 class="mar_btm_6">积分明细</h6>
+					<img src="img/dope_mingxi.png" class="am-center bd_radius_50" width="46" height="46" alt="">
+				</a>
+			</div>
+			<div class="am-u-sm-6 am-text-center">
+				<a href="dope_change.html" class="am-block">
+					<h6 class="mar_btm_6">兑换记录</h6>
+					<img src="img/dope_change.png" class="am-center bd_radius_50" width="46" height="46" alt="">
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="p_6">
+		<ul class="am-g">
+			<li class="am-u-sm-6">
+				<div class="goods_item">
+	<a href="goods_detail.html" class="goods_pic" style="background-image: url(img/goods_pic.png);"></a>
+	<div class="goods_wrap">
+		<a href="goods_detail.html" class="goods_title">商品名称参数等一系列的描述显示</a>
+		<div class="goods_flex">
+			<span class="goods_price">￥299.00</span>
+			<a class="goods_btn" href="javascript:;">马上抢</a>
+		</div>
+	</div>
+</div>
+			</li>
+			<li class="am-u-sm-6">
+				<div class="goods_item">
+	<a href="goods_detail.html" class="goods_pic" style="background-image: url(img/goods_pic.png);"></a>
+	<div class="goods_wrap">
+		<a href="goods_detail.html" class="goods_title">商品名称参数等一系列的描述显示</a>
+		<div class="goods_flex">
+			<span class="goods_price">￥299.00</span>
+			<a class="goods_btn" href="javascript:;">马上抢</a>
+		</div>
+	</div>
+</div>
+			</li>
+			<li class="am-u-sm-6">
+				<div class="goods_item">
+	<a href="goods_detail.html" class="goods_pic" style="background-image: url(img/goods_pic.png);"></a>
+	<div class="goods_wrap">
+		<a href="goods_detail.html" class="goods_title">商品名称参数等一系列的描述显示</a>
+		<div class="goods_flex">
+			<span class="goods_price">￥299.00</span>
+			<a class="goods_btn" href="javascript:;">马上抢</a>
+		</div>
+	</div>
+</div>
+			</li>
+			<li class="am-u-sm-6">
+				<div class="goods_item">
+	<a href="goods_detail.html" class="goods_pic" style="background-image: url(img/goods_pic.png);"></a>
+	<div class="goods_wrap">
+		<a href="goods_detail.html" class="goods_title">商品名称参数等一系列的描述显示</a>
+		<div class="goods_flex">
+			<span class="goods_price">￥299.00</span>
+			<a class="goods_btn" href="javascript:;">马上抢</a>
+		</div>
+	</div>
+</div>
+			</li>
+			<li class="am-u-sm-6">
+				<div class="goods_item">
+	<a href="goods_detail.html" class="goods_pic" style="background-image: url(img/goods_pic.png);"></a>
+	<div class="goods_wrap">
+		<a href="goods_detail.html" class="goods_title">商品名称参数等一系列的描述显示</a>
+		<div class="goods_flex">
+			<span class="goods_price">￥299.00</span>
+			<a class="goods_btn" href="javascript:;">马上抢</a>
+		</div>
+	</div>
+</div>
+			</li>
+		</ul>
+	</div>
+
+</body>
+
+</html>

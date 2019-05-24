@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<link rel="stylesheet" href="css/amazeui.min.css">
+<link rel="stylesheet" href="css/style.min.css">
+<link rel="stylesheet" href="css/scs.min.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/amazeui.min.js"></script>
+<script src="js/jquery.SuperSlide.2.1.3.js"></script>
+<script src="js/jquery.scs.min.js"></script>
+<script src="js/CNAddrArr.min.js"></script>
+<script src="js/myjs.js"></script>
+<title>象眼旅游</title>
+
+<script>
+// 获取当前城市及天气状态
+function showLocation(data) {
+    console.log(data.content.address_detail.city);
+}
+$.getScript("http://api.map.baidu.com/location/ip?ak=xgcQYOzqj6P60i5LZVLBVtVewQliPyXe&callback=showLocation");
+
+$.ajax({
+    type: 'GET',
+    url: 'https://www.tianqiapi.com/api/',
+    data: 'version=v1&style=1001&city=',
+    dataType: 'JSON',
+    error: function () {
+        alert('网络错误');
+    },
+    success: function (res) {
+        uptime = res.update_time.substring(11);
+        uptime = uptime.substring(0,uptime.length-3);
+       $('#weather').html('【' + res.city + '】' + res.data[0].wea + ' ' + res.data[0].tem1 + '/' + res.data[0].tem2);
+    }
+});
+
+</script>
+</head>
+
+<body class="pad_btm bg_normal">
+
+	<!-- 公共顶部 -->
+<div class="top_box flex_between bg_white pad_12 bd_btm">
+	<a href="index.html">
+		<img src="img/logo.png" width="91" height="30" alt="">
+	</a>
+	<div class="am-text-sm col_main" id="weather"></div>
+</div>
+
+	<div class="user_top flex_normal bg_cover" style="background-image:url(img/user_bg.png);">
+		<!-- 未登录显示 -->
+		<img class="bd_radius_50 mar_rt_12" src="img/thumb_none.png" width="70" height="70" alt="">
+		<!-- 登录之后显示 -->
+		<!-- <img class="bd_radius_50 mar_rt_12" src="img/thumb.png" width="70" height="70" alt=""> -->
+		<div class="flex_1">
+			<!-- 未登录显示 -->
+			<a href="login.html" class="am-text-lg font_bold mar_btm_6 am-block">登录/注册</a>
+			<!-- 登录之后显示 -->
+			<!-- <h4 class="am-text-lg font_bold mar_btm_6">会员昵称昵称</h4> -->
+			<div class="am-text-sm">Hi~等你好久了~</div>
+		</div>
+	</div>
+
+	<div class="mar_btm_12">
+		<a class="p_12 bd_btm flex_between bg_white" href="my_travel.html">
+			<div class="flex_normal">
+				<img class="mar_rt_12" src="img/icon_travel.png" width="16" height="16" alt=""><span>我的行程</span>
+			</div>
+			<img src="img/icon_right.png" width="6" height="11" alt="">
+		</a>
+		<!-- <a class="p_12 bd_btm flex_between bg_white" href="my_collect.html">
+			<div class="flex_normal">
+				<img class="mar_rt_12" src="img/icon_collect.png" width="16" height="16" alt=""><span>我的收藏</span>
+			</div>
+			<img src="img/icon_right.png" width="6" height="11" alt="">
+		</a> -->
+		<a class="p_12 bd_btm flex_between bg_white" href="my_publish.html">
+			<div class="flex_normal">
+				<img class="mar_rt_12" src="img/icon_infor.png" width="16" height="16" alt=""><span>我的发布</span>
+			</div>
+			<img src="img/icon_right.png" width="6" height="11" alt="">
+		</a>
+		<!-- <a class="p_12 bd_btm flex_between bg_white" href="my_dope.html">
+			<div class="flex_normal">
+				<img class="mar_rt_12" src="img/icon_dope.png" width="16" height="16" alt=""><span>我的积分</span>
+			</div>
+			<img src="img/icon_right.png" width="6" height="11" alt="">
+		</a> -->
+		<a class="p_12 bd_btm flex_between bg_white" href="my_log.html">
+			<div class="flex_normal">
+				<img class="mar_rt_12" src="img/icon_log.png" width="16" height="16" alt=""><span>我的交易记录</span>
+			</div>
+			<img src="img/icon_right.png" width="6" height="11" alt="">
+		</a>
+	</div>
+
+	<div class="bd_btm_10">
+		<a class="p_12 bd_btm flex_between bg_white" href="my_order.html">
+			<div class="flex_normal">
+				<img class="mar_rt_12" src="img/icon_order.png" width="16" height="16" alt=""><span>全部订单</span>
+			</div>
+			<img src="img/icon_right.png" width="6" height="11" alt="">
+		</a>
+		<a class="p_12 bd_btm flex_between bg_white" href="my_coupon.html">
+			<div class="flex_normal">
+				<img class="mar_rt_12" src="img/icon_coupon.png" width="16" height="16" alt=""><span>优惠券</span>
+			</div>
+			<img src="img/icon_right.png" width="6" height="11" alt="">
+		</a>
+	</div>
+
+	<div class="bd_btm_10">
+		<a class="p_12 bd_btm flex_between bg_white" href="my_setting.html">
+			<div class="flex_normal">
+				<img class="mar_rt_12" src="img/icon_setting.png" width="16" height="16" alt=""><span>通用设置</span>
+			</div>
+			<img src="img/icon_right.png" width="6" height="11" alt="">
+		</a>
+		<a class="p_12 bd_btm flex_between bg_white" href="http://wpa.qq.com/msgrd?v=3&uin=QQ号码&site=qq&menu=yes">
+			<div class="flex_normal">
+				<img class="mar_rt_12" src="img/icon_seek.png" width="16" height="16" alt=""><span>客服咨询</span>
+			</div>
+			<img src="img/icon_right.png" width="6" height="11" alt="">
+		</a>
+	</div>
+
+
+	<!-- 底部导航 -->
+<div class="btm_wrap bd_top bg_white">
+	<ul class="btm_nav flex_around am-text-sm">
+		<li class="btm_cell active">
+			<a href="index.html">
+				<div class="btm_bg index"></div>
+				<h5>首页</h5>
+			</a>
+		</li>
+		<li class="btm_cell">
+			<a href="news.html">
+				<div class="btm_bg news"></div>
+				<h5>资讯</h5>
+			</a>
+		</li>
+		<li class="btm_cell">
+			<a href="travel_index.html">
+				<div class="btm_bg photo"></div>
+				<h5>旅拍</h5>
+			</a>
+		</li>
+		<li class="btm_cell">
+			<a href="mall.html">
+				<div class="btm_bg cart"></div>
+				<h5>商城</h5>
+			</a>
+		</li>
+		<li class="btm_cell">
+			<a href="user.html">
+				<div class="btm_bg user"></div>
+				<h5>我的</h5>
+			</a>
+		</li>
+	</ul>
+</div>
+
+
+</body>
+
+</html>

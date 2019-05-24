@@ -1,0 +1,50 @@
+.goods {
+	&_item {
+		display: block;
+		margin-bottom: 12px;
+		box-shadow:0px 0px 27px 0px rgba(211,211,211,0.43);
+		background-color: $white-color;
+	}
+	&_pic {
+		display: block;
+		padding-top: 100%;
+		@extend .bg_cover;
+	}
+	&_wrap {
+		padding: 12px 10px;
+		background-color: $white-color;
+	}
+	&_title {
+		@include rowhide(2,24px);
+		margin-bottom: 6px;
+		text-align: justify;
+	}
+	&_flex {
+		@extend .flex_between;
+	}
+	&_price {
+		color: $main-color;
+	}
+	&_btn {
+		display: inline-block;
+		padding: 0 10px;
+		font-size: 14px;
+		@include lineht(30px);
+		border-radius: 30px;
+		@include colbg($white-color,$main-color);
+	}
+	&_collect {
+		@include size(24px,22px);
+		background: url(../img/icon_mall_collect.png) no-repeat center;
+		background-size: 100% 100%;
+		&.active {
+			background-image: url(../img/icon_mall_collect_active.png);
+		}
+	}
+	&_detail {
+		overflow: hidden;
+		p img {
+			width: 100%!important;
+		}
+	}
+}

@@ -1,0 +1,51 @@
+.btm {
+	&_wrap {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: $btm-size;
+		z-index: 99999;
+	}
+	&_nav {
+		height: $btm-size;
+	}
+	&_cell {
+		text-align: center;
+		color: #909090;
+		&.active {
+			color: $main-color;
+			.btm_bg {
+				background-position: center left;
+			}
+		}
+	}
+	&_bg {
+		margin: 0 auto;
+		@include size(24px, 24px);
+		background-position: center right;
+		background-repeat: no-repeat;
+		background-size: 48px 24px;
+		&.index {
+			background-image: url(../img/icon_home.png);
+		}
+		&.news {
+			background-image: url(../img/icon_classify.png);
+		}
+		&.cart {
+			background-image: url(../img/icon_cart.png);
+		}
+		&.user {
+			background-image: url(../img/icon_user.png);
+		}
+		&.photo {
+			background-image: url(../img/icon_photo.png);
+		}
+	}
+	&_fixed {
+		display: block;
+		position: fixed;
+		right: 10px;
+		bottom: 100px;
+	}
+}

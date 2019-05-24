@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('public/meta.html')
+</head>
+
+<body class="">
+
+	@@include('public/top_box.html')
+
+	<div class="user_top big bg_cover" style="background-image:url(img/order_bg.png);">
+		<h6 class="mar_btm_6">支付成功-已成功预订</h6>
+		<div class="am-text-sm">您已成功预订滇西密境大理丽门票</div>
+	</div>
+
+	<div class="p_12">
+		<h3>景区门票</h3>
+		<ul>
+			<li class="ticket_piao pd_12 bd_btm">
+				@@include('public/ticket_piao.html')
+				<span class="ticket_status col_main">已支付</span>
+			</li>
+			<li class="ticket_piao pd_12 bd_btm">
+				@@include('public/ticket_piao.html')
+				<span class="ticket_status col_main">已支付</span>
+			</li>
+		</ul>
+	</div>
+
+	<div class="confirm_wrap p_12">
+		<a href="index.html" class="confirm_btn mar_btm_12">返回首页</a>
+	</div>
+
+</body>
+
+</html>

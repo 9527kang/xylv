@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('public/meta.html')
+</head>
+
+<body class="pad_btm">
+
+	@@include('public/top_box.html')
+	
+	<div class="p_12">
+		<div class="travel_banner bd_radius bg_cover" style="background-image: url(../img/banner.png);"></div>
+	</div>
+
+	<!-- 热门资讯 -->
+	<a href="javascript:;" class="flex_between p_12 bg_white">
+		<div class="title_left am-text-lg">
+			热门资讯
+		</div>
+	</a>
+
+	<div class="p_6">
+		<div class="am-g">
+			<div class="am-u-sm-6">
+				@@include('public/news_item.html')
+				@@include('public/news_item.html')
+				@@include('public/news_item_square.html')
+			</div>
+			<div class="am-u-sm-6">
+				@@include('public/news_item_only.html')
+				@@include('public/news_item.html')
+				@@include('public/news_item_only.html')
+			</div>
+		</div>
+	</div>
+
+	@@include('public/btm_nav.html')
+
+</body>
+
+</html>

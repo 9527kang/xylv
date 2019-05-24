@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('public/meta.html')
+</head>
+
+<body class="">
+
+	@@include('public/top_box.html')
+
+	<div class="book_box">
+		<div class="bd_btm flex_center pd_12">
+			<input id="myAddrs" class="am-text-center font_bold" type="text" value="河南省 郑州市 金水区" readonly/><img src="img/icon_arrow_down.png" width="16" height="16" alt=""/>
+		</div>
+
+		<div class="am-alert am-alert-danger" id="my-alert" style="display: none;margin: 0;">
+			<p>入住日期应小于离开日期！</p>
+		</div>
+		<div class="am-g am-text-center pd_12 bd_btm">
+			<div class="am-u-sm-6" id="my-start">
+				<div>入住日期</div><span id="my-startDate">2019-05-05</span>
+			</div>
+			<div class="am-u-sm-6" id="my-end">
+				<div>离开日期</div><span id="my-endDate">2019-05-06</span>
+			</div>
+		</div>
+
+		<div class="book_key bd_btm flex_center pd_12">
+			<input type="text" class="am-text-center lg" id="enter_txt" placeholder="请输入关键字"><img class="book_close" id="clear_txt" src="img/icon_close.png" width="12" height="12" alt="">
+		</div>
+
+		<div class="pd_12 am-g">
+			<div class="flex_normal am-u-sm-6">
+				<input type="radio" name="book_kind" id="low_price" style="width: auto;">
+				<label for="low_price" class="mar_lt_6">搜低价</label>
+			</div>
+			<div class="flex_normal am-u-sm-6">
+				<input type="radio" name="book_kind" id="honesty" style="width: auto;">
+				<label for="honesty" class="mar_lt_6">诚信优先</label>
+			</div>
+		</div>
+
+		<button class="book_btn bg_main col_white am-text-center bd_radius">查找民宿</button>
+		
+	</div>
+
+	<script>
+	$(function(){
+		/**
+		* 通过数组id获取地址列表数组
+		*
+		* @param {Number} id
+		* @return {Array} 
+		*/
+		function getAddrsArrayById(id) {
+		var results = [];
+		if (addr_arr[id] != undefined)
+			addr_arr[id].forEach(function (subArr) {
+				results.push({
+					key: subArr[0],
+					val: subArr[1]
+				});
+			});
+		else {
+			return;
+		}
+		return results;
+		}
+		/**
+			* 通过开始的key获取开始时应该选中开始数组中哪个元素
+			*
+			* @param {Array} StartArr
+			* @param {Number|String} key
+			* @return {Number} 
+			*/
+		function getStartIndexByKeyFromStartArr(startArr, key) {
+			var result = 0;
+			if (startArr != undefined)
+				startArr.forEach(function (obj, index) {
+					if (obj.key == key) {
+						result = index;
+						return false;
+					}
+				});
+			return result;
+		}
+
+		//bind the click event for 'input' element
+		$("#myAddrs").click(function () {
+			var PROVINCES = [],
+				startCities = [],
+				startDists = [];
+			//Province data，shall never change.
+			addr_arr[0].forEach(function (prov) {
+				PROVINCES.push({
+					key: prov[0],
+					val: prov[1]
+				});
+			});
+			//init other data.
+			var $input = $(this),
+				dataKey = $input.attr("data-key"),
+				provKey = 1, //default province 北京
+				cityKey = 36, //default city 北京
+				distKey = 37, //default district 北京东城区
+				distStartIndex = 0, //default 0
+				cityStartIndex = 0, //default 0
+				provStartIndex = 0; //default 0
+
+			if (dataKey != "" && dataKey != undefined) {
+				var sArr = dataKey.split("-");
+				if (sArr.length == 3) {
+					provKey = sArr[0];
+					cityKey = sArr[1];
+					distKey = sArr[2];
+
+				} else if (sArr.length == 2) { //such as 台湾，香港 and the like.
+					provKey = sArr[0];
+					cityKey = sArr[1];
+				}
+				startCities = getAddrsArrayById(provKey);
+				startDists = getAddrsArrayById(cityKey);
+				provStartIndex = getStartIndexByKeyFromStartArr(PROVINCES, provKey);
+				cityStartIndex = getStartIndexByKeyFromStartArr(startCities, cityKey);
+				distStartIndex = getStartIndexByKeyFromStartArr(startDists, distKey);
+			}
+			var navArr = [{ //3 scrollers, and the title and id will be as follows:
+				title: "省",
+				id: "scs_items_prov"
+			}, {
+				title: "市",
+				id: "scs_items_city"
+			}, {
+				title: "区",
+				id: "scs_items_dist"
+			}];
+			SCS.init({
+				navArr: navArr,
+				onOk: function (selectedKey, selectedValue) {
+					$input.val(selectedValue).attr("data-key", selectedKey);
+				}
+			});
+			var distScroller = new SCS.scrollCascadeSelect({
+				el: "#" + navArr[2].id,
+				dataArr: startDists,
+				startIndex: distStartIndex
+			});
+			var cityScroller = new SCS.scrollCascadeSelect({
+				el: "#" + navArr[1].id,
+				dataArr: startCities,
+				startIndex: cityStartIndex,
+				onChange: function (selectedItem, selectedIndex) {
+					distScroller.render(getAddrsArrayById(selectedItem.key), 0); //re-render distScroller when cityScroller change
+				}
+			});
+			var provScroller = new SCS.scrollCascadeSelect({
+				el: "#" + navArr[0].id,
+				dataArr: PROVINCES,
+				startIndex: provStartIndex,
+				onChange: function (selectedItem,
+					selectedIndex
+				) { //re-render both cityScroller and distScroller when provScroller change
+					cityScroller.render(getAddrsArrayById(selectedItem.key), 0);
+					distScroller.render(getAddrsArrayById(cityScroller.getSelectedItem().key), 0);
+				}
+			});
+		});
+		// 选择城市三级联动止
+
+		// 选择起止时间
+		var startDate = new Date();
+		var endDate = new Date();
+
+		var $alert = $('#my-alert');
+		$('#my-start').datepicker().
+		on('changeDate.datepicker.amui', function(event) {
+			if (event.date.valueOf() > endDate.valueOf()) {
+			$alert.find('p').text('入住日期应小于离开日期！').end().show();
+			} else {
+			$alert.hide();
+			startDate = new Date(event.date);
+			$('#my-startDate').text($('#my-start').data('date'));
+			}
+			$(this).datepicker('close');
+		});
+
+		$('#my-end').datepicker().
+		on('changeDate.datepicker.amui', function(event) {
+			if (event.date.valueOf() < startDate.valueOf()) {
+			$alert.find('p').text('离开日期应大于入住日期！').end().show();
+			} else {
+			$alert.hide();
+			endDate = new Date(event.date);
+			$('#my-endDate').text($('#my-end').data('date'));
+			}
+			$(this).datepicker('close');
+		});
+		// 选择起止时间
+
+	})
+	</script>
+
+</body>
+
+</html>

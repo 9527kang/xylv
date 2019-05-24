@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('public/meta.html')
+</head>
+
+<body class="">
+
+	@@include('public/top_box.html')
+
+	@@include('public/search_box.html')
+
+	<ul class="order_hd flex_around bd_btm">
+		<li class="order_item active tab_item">酒店</li>
+		<li class="order_item tab_item">民宿</li>
+	</ul>
+
+	<ul class="tab_wrap">
+		<li class="tab_cont active">
+			<!-- 酒店 -->
+			<a href="javascript:;" class="am-block p_12 bg_white">
+				<div class="title_left am-text-lg font_bold">精品酒店推荐</div>
+				<div class="title_desc am-text-sm col_nine">坐落在这里的家</div>
+			</a>
+			<div class="list_box pad_lt_12 pad_btm_12">
+				@@include('public/wineshop_item.html')
+				@@include('public/wineshop_item.html')
+				@@include('public/wineshop_item.html')
+				@@include('public/wineshop_item.html')
+			</div>
+
+			<ul class="p_12 flex_around bg_white bd_btm">
+				<li class="flex_center">
+					<span class="mar_rt_6">智能推荐</span><img src="img/icon_down.png" width="12" height="12" alt="">
+				</li>
+				<li class="flex_center">
+					<span class="mar_rt_6">价格星级</span><img src="img/icon_down.png" width="12" height="12" alt="">
+				</li>
+				<li class="flex_center">
+					<span class="mar_rt_6">全部</span><img src="img/icon_down.png" width="12" height="12" alt="">
+				</li>
+			</ul>
+
+			<div class="pad_12">
+				@@include('public/hotel_item.html')
+				@@include('public/hotel_item.html')
+				@@include('public/hotel_item.html')
+			</div>
+
+			<div class="no_data">暂无更多记录~</div>
+
+			<!-- 优惠券弹窗 -->
+			<div class="common_bg" id="common_bg"></div>
+			<div class="wine_tan">
+				<img class="wine_close" src="img/icon_close_white.png" width="24" height="24" alt="">
+				<div class="wine_man">满199元可用</div>
+				<div class="wine_price">50</div>
+				<a class="wine_btn" href="javascript:;">立即领取</a>
+			</div>
+		</li>
+
+		<li class="tab_cont">
+			<!-- 民宿 -->
+			<a href="javascript:;" class="am-block p_12 bg_white">
+				<div class="title_left am-text-lg font_bold">最热民宿推荐</div>
+				<div class="title_desc am-text-sm col_nine">坐落在这里的家</div>
+			</a>
+			<div class="list_box pad_lt_12 pad_btm_12">
+				@@include('public/wineshop_item.html')
+				@@include('public/wineshop_item.html')
+				@@include('public/wineshop_item.html')
+				@@include('public/wineshop_item.html')
+			</div>
+
+			<ul class="p_12 flex_around bg_white bd_btm">
+				<li class="flex_center">
+					<span class="mar_rt_6">受欢迎度</span><img src="img/icon_down.png" width="12" height="12" alt="">
+				</li>
+				<li class="flex_center">
+					<span class="mar_rt_6">特色民宿</span><img src="img/icon_down.png" width="12" height="12" alt="">
+				</li>
+				<li class="flex_center">
+					<span class="mar_rt_6">位置距离</span><img src="img/icon_down.png" width="12" height="12" alt="">
+				</li>
+			</ul>
+
+			<div class="pad_12">
+				@@include('public/hotel_item.html')
+				@@include('public/hotel_item.html')
+				@@include('public/hotel_item.html')
+			</div>
+
+			<div class="no_data">暂无更多记录~</div>
+
+			<!-- 优惠券弹窗 -->
+			<div class="common_bg" id="common_bg"></div>
+			<div class="wine_tan">
+				<img class="wine_close" src="img/icon_close_white.png" width="24" height="24" alt="">
+				<div class="wine_man">满199元可用</div>
+				<div class="wine_price">50</div>
+				<a class="wine_btn" href="javascript:;">立即领取</a>
+			</div>
+		</li>
+	</ul>
+
+
+
+	<script>
+		$(function () {
+			// 优惠券弹窗
+			setTimeout(function () {
+				$('#common_bg').fadeIn(600)
+				$('.wine_tan').fadeIn(600)
+			}, 1500)
+
+			$('#common_bg').click(function () {
+				$('#common_bg').fadeOut(600)
+				$('.wine_tan').fadeOut(600)
+			})
+
+			$('.wine_close').click(function () {
+				$('#common_bg').fadeOut(600)
+				$('.wine_tan').fadeOut(600)
+			})
+
+			$('.wine_btn').click(function () {
+				console.log('领取成功！')
+			})
+
+		})
+	</script>
+
+
+</body>
+
+</html>

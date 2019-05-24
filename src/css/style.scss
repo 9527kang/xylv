@@ -1,0 +1,1035 @@
+@import 'variable';
+@import 'reset';
+@import 'mixin';
+@import 'mylei';
+@import 'common';
+
+html {
+	max-width: 750px;
+	margin: 0 auto;
+	height: 100%;
+}
+
+.font_bold {
+	font-weight: bold;
+}
+
+.box_shadow {
+	box-shadow:0px 0px 19px 1px rgba(235,73,73,0.3);
+}
+
+body.pad_btm {
+	padding-bottom: $btm-size;
+}
+
+.top {
+	&_box {
+		height: 50px;
+	}
+}
+
+.webkit_box {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+}
+
+.webkit_cont {
+	flex: 1;
+	overflow: auto;
+}
+
+.am-slider-a1 .am-control-nav li a.am-active {
+	background-color: $main-color;
+}
+
+[data-am-widget=tabs] {
+	margin: 0;
+}
+
+.am-tabs-bd {
+	border: none;
+}
+
+.am-tabs-default .am-tabs-nav {
+	display: block;
+	text-align: center;
+	background-color: $white-color;
+}
+
+[data-am-widget=tabs] .am-tabs-nav li {
+	flex: none;
+	display: inline-block;
+	margin: 0 2px;
+}
+
+.am-tabs-default .am-tabs-nav>.am-active a {
+	background-color: $main-color;
+}
+
+.am-tabs-default .am-tabs-nav a {
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background-color: $nine-color;
+}
+
+.am-tabs-bd .am-tab-panel {
+	height: 190px;
+	padding: 15px 10px 0;
+}
+
+.tab {
+	&_cont {
+		display: none;
+		&.active {
+			display: block;
+		}
+	}
+}
+
+.list {
+	&_box {
+		white-space: nowrap;
+		overflow-x: scroll;
+		a {
+			display: inline-block;
+			width: 186px;
+			position: relative;
+		}
+	}
+}
+
+.pic {
+	&_big {
+		position: relative;
+		height: 258px;
+		&.square {
+			height: 164px;
+		}
+	}
+	&_title {
+		@include rowhide(2,22px);
+	}
+	&_zan {
+		padding-left: 16px;
+		background: url(../img/icon_zan.png) no-repeat left center;
+		background-size: 14px 14px;
+	}
+	&_scan {
+		padding-left: 16px;
+		background: url(../img/icon_scan.png) no-repeat left center;
+		background-size: 14px 14px;
+	}
+	&_txt {
+		position: absolute;
+		bottom: 20px;
+		left: 0;
+		width: 100%;
+	}
+}
+
+[class*=am-u-]+[class*=am-u-]:last-child {
+	float: left;
+}
+
+[class*=am-u-] {
+	padding: 0 6px;
+}
+
+.travel {
+	&_banner {
+		height: 130px;
+	}
+	&_icon {
+		position: fixed;
+		bottom: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	&_wei {
+		position: relative;
+		&:before {
+			content: '*';
+			display: inline-block;
+			margin-right: 6px;
+			color: $main-color;
+		}
+	}
+	&_lb {
+		width: 60px;
+		height: 60px;
+		line-height: 58px;
+		font-size: 30px;
+		color: $nine-color;
+	}
+	&_pic {
+		margin-right: 12px;
+	}
+	&_item {
+		height: 210px;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+	}
+	&_tre {
+		width: $ful-width/3;
+		padding: 16px 0;
+		border-right: 1px solid $bg-color;
+		border-bottom: 1px solid $bg-color;
+		&:nth-child(3n+3) {
+			border-right: none;
+		}
+	}
+	&_msg {
+		width: 110px;
+	}
+}
+
+.detail {
+	&_box {
+		overflow: hidden;
+		padding-top: 12px;
+		padding-bottom: 12px;
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-weight: bold;
+			margin-top: 12px;
+			margin-bottom: 12px;
+			text-align: center;
+		}
+
+		h1 {
+			font-size: 28px;
+		}
+
+		h2 {
+			font-size: 24px;
+		}
+
+		h3 {
+			font-size: 22px;
+		}
+
+		h4 {
+			font-size: 20px;
+		}
+
+		h5 {
+			font-size: 18px;
+		}
+
+		h6 {
+			font-size: 16px;
+		}
+
+		p {
+			text-align: justify;
+			text-indent: 2em;
+			margin-bottom: 10px;
+
+			img {
+				max-width: 100% !important;
+				height: auto;
+			}
+		}
+	}
+}
+
+.kind {
+	&_menu {
+		position: fixed;
+		left: 0;
+		top: 104px;
+		width: 88px;
+		text-align: center;
+		max-height: 450px;
+		overflow-y: scroll;
+		background: #f5f5f5;
+	}
+	&_item {
+		position: relative;
+		height: 46px;
+		line-height: 45px;
+		border-bottom: $border;
+		&.active {
+			color: $main-color;
+			background-color: $white-color;
+			&:before {
+				content: '';
+				@include position(0,0);
+				@include size(2px,100%);
+				background-color: $main-color;
+			}
+		}
+	}
+	&_cont {
+		margin-left: 88px;
+		display: none;
+		&.active {
+			display: block;
+		}
+	}
+	&_banner {
+		height: 96px;
+	}
+	&_thumb {
+		position: relative;
+		height: 68px;
+		border-radius: 6px;
+		border-top-left-radius: 0;
+	}
+	&_tag {
+		@include position(0,0);
+		display: inline-block;
+		height: 22px;
+		line-height: 22px;
+		padding: 0 8px;
+		border-radius: 0 22px 22px 0;
+		font-size: 12px;
+		text-transform: uppercase;
+		@include colbg($white-color,$main-color);
+	}
+	&_cell {
+		display: block;
+		width: 20%;
+		float: left;
+	}
+}
+
+.scenic {
+	&_top {
+		position: relative;
+		padding: 20px;
+	}
+	&_bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 240px;
+		background-attachment: fixed;
+		z-index: -1;
+	}
+	&_banner {
+		height: 190px;
+	}
+	&_intro {
+		&.active {
+			.icon {
+				transform: rotate(270deg);
+			}
+		}
+		.icon {
+			transition: .6s ease-in-out;
+			transform: rotate(90deg);
+		}
+	}
+	&_cont {
+		height: 66px;
+		overflow: hidden;
+		&.active {
+			height: auto;
+		}
+	}
+	&_content {
+		@include rowhide(3,22px);
+	}
+}
+
+.play {
+	&_pic {
+		position: relative;
+		height: 92px;
+		span {
+			position: absolute;
+			right: 12px;
+			bottom: 12px;
+			padding: 0 8px;
+			@include lineht(20px);
+			font-size: 12px;
+			background-color: rgba($color: #000000, $alpha: .5);
+		}
+	}
+	&_intro {
+		&.active {
+			.icon {
+				transform: rotate(270deg);
+			}
+		}
+		.icon {
+			transition: .6s ease-in-out;
+			transform: rotate(90deg);
+		}
+	}
+	&_cont {
+		height: 44px;
+		overflow: hidden;
+		&.active {
+			height: auto;
+		}
+	}
+}
+
+.ticket {
+	&_item {
+		position: relative;
+		height: 100px;
+		background: $main-color url(../img/ticket_bg.png) no-repeat right center;
+		background-size: contain;
+		&:before,
+		&:after {
+			content: '';
+			display: block;
+			@include size(10px,10px);
+			border-radius: 50%;
+			background-color: $white-color;
+			position: absolute;
+			right: 95px;
+		}
+		&:before {
+			top: -2px;
+		}
+		&:after {
+			bottom: -2px;
+		}
+	}
+	&_buy {
+		position: relative;
+		width: 100px;
+		&:before {
+			content: '';
+			@include position(0,50%);
+			transform: translateY(-50%);
+			height: 70px;
+			border-left: 1px dashed $white-color;
+		}
+	}
+	&_btn {
+		display: inline-block;
+		font-size: 12px;
+		padding: 0 6px;
+		@include lineht(22px);
+		border-radius: 5px;
+		@include colbg($main-color,$white-color);
+		&.transparent {
+			line-height: 20px;
+			border: 1px solid $white-color;
+			@include colbg($white-color,transparent);
+		}
+		&.deputy {
+			color: $deputy-color;
+		}
+	}
+	&_fixed {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		border-top: $border;
+	}
+	&_tai {
+		padding: 30px 0;
+	}
+	&_piao {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+	}
+	&_status {
+		position: absolute;
+		right: 0;
+		bottom: 12px;
+	}
+}
+
+.hotel {
+	&_wrap {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		height: 90px;
+	}
+	&_banner {
+		background-size: cover;
+		background-position: center;
+	}
+	&_box {
+		height: 160px;
+		position: relative;
+	}
+	&_item {
+		height: 160px;
+	}
+	&_score {
+		position: absolute;
+		left: 20px;
+		bottom: 20px;
+		border-radius: 22px;
+	}
+	&_piao {
+		position: relative;
+		@include size(130px,90px);
+		border-top-left-radius: 0;
+		&.square {
+			@include size(90px,90px);
+		}
+	}
+	&_line {
+		text-decoration: line-through;
+	}
+	&_fixed {
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		left: 0;
+		z-index: 20;
+	}
+	&_tan {
+		display: none;
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		left: 0;
+		z-index: 101;
+	}
+	&_close {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+	}
+	&_pay {
+		border: 2px solid $main-color;
+	}
+	&_online {
+		padding: 0 6px;
+	}
+}
+
+.culture {
+	&_bg {
+		padding-bottom: 200px;
+		background: $bg-color url(../img/culture_bg.png) no-repeat bottom center;
+		background-size: cover;
+	}
+	&_pic {
+		position: relative;
+		height: 120px;
+		margin-bottom: 12px;
+	}
+	&_desc {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		@extend .text_ellipsis;
+		@include lineht(30px);
+		text-align: center;
+		font-size: 12px;
+		background-color: rgba($color: $main-color, $alpha: .7);
+		color: $white-color;
+	}
+}
+
+.num {
+    &_form {
+        padding: 8px;
+		@include size(92px,32px);
+		line-height: 30px;
+		border: $border;
+		background-color: transparent;
+		color: $tre-color;
+		border-radius: 4px;
+    }
+    &_minus,
+    &_plus {
+        width: 10px;
+    }
+    &_ipt {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.book {
+	&_box {
+		padding: 40px 20px;
+	}
+	&_key {
+		position: relative;
+	}
+	&_close {
+		position: absolute;
+		right: 12px;
+		top: 50%;
+		margin-top: -6px;
+	}
+	&_btn {
+		display: block;
+		width: 100%;
+		margin-bottom: 12px;
+		@include lineht(42px);
+	}
+}
+
+.ques {
+	&_menu {
+		li {
+			height: 32px;
+			line-height: 30px;
+			text-align: center;
+			margin-left: 6px;
+			padding: 0 12px;
+			border-radius: 16px;
+			color: $main-color;
+			border: 1px solid $main-color;
+			&.active {
+				background-color: $main-color;
+				color: $white-color;
+			}
+		}
+	}
+	&_cont {
+		@include rowhide(3,22px);
+		font-size: 14px;
+		text-align: justify;
+		span {
+			margin-right: 6px;
+			display: inline-block;
+			padding: 0 8px;
+			font-size: 12px;
+			@include lineht(22px);
+			color: $white-color;
+			border-radius: 4px;
+			background-color: #FF5D00;
+		}
+	}
+}
+
+.pic {
+	&_position {
+		position: fixed;
+		bottom: 30px;
+		z-index: 10;
+	}
+	&_ask {
+		right: 8px;
+	}
+	&_answer {
+		left: 0;
+	}
+}
+
+$piao-bg: -30deg,rgba(102,220,188,1),rgba(92,140,228,1);
+
+.piao {
+	&_bg {
+		background: linear-gradient($piao-bg);
+		background: -o-linear-gradient($piao-bg);
+		background: -moz-linear-gradient($piao-bg);
+		background: linear-gradient($piao-bg);
+	}
+	&_zhu {
+		position: relative;
+		width: 70px;
+		height: 70px;
+		margin-right: 40px;
+		span {
+			display: inline-block;
+			padding: 0 6px;
+			border-radius: 40px;
+			font-size: 12px;
+			position: absolute;
+			left: -10px;
+			top: 0;
+			background-color: $main-color;
+			color: $white-color;
+		}
+	}
+}
+
+.no {
+	&_data {
+		margin: 12px 0;
+		text-align: center;
+		color: $nine-color;
+	}
+}
+
+input,
+textarea {
+	@include placehold($nine-color,14px);
+}
+
+input.lg {
+	@include placehold($nine-color,16px);
+}
+
+.confirm {
+	&_wrap {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		background-color: $white-color;
+	}
+	&_btn {
+		display: block;
+		width: 100%;
+		border-radius: 40px;
+		@include lineht(42px);
+		text-align: center;
+		@include colbg($white-color,$main-color);
+		&.transparent {
+			line-height: 40px;
+			background-color: transparent;
+			color: $four-color;
+			border: $border;
+		}
+	}
+}
+
+.feed {
+	&_item {
+		padding: 0 12px;
+		margin-right: 12px;
+		margin-bottom: 12px;
+		height: 32px;
+		line-height: 30px;
+		text-align: center;
+		color: $nine-color;
+		border-radius: 5px;
+		border: $border;
+		&.active {
+			background-color: $main-color;
+			border-color: $main-color;
+			color: $white-color;
+		}
+	}
+	&_area {
+		display: block;
+		resize: none;
+		width: 100%;
+		height: 120px;
+		@include placehold($nine-color,14px);
+	}
+}
+
+.coupon {
+	&_list {
+		padding: 12px;
+	}
+	&_item {
+		position: relative;
+		@include size(350px,116px);
+		margin-bottom: 12px;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		background: url(../img/coupon_bg.png) no-repeat center;
+		background-size: 100% 100%;
+		.status {
+			position: absolute;
+			right: 4px;
+			top: 4px;
+			font-size: 12px;
+			&.active {
+				color: $main-color;
+			}
+		}
+	}
+	&_lt {
+		display: flex;
+		align-items: flex-start;
+		.price {
+			font-size: 40px;
+			font-weight: bold;
+			line-height: 1;
+		}
+		.xian {
+			line-height: 1.2;
+		}
+	}
+	&_rt {
+		.use {
+			padding: 0 6px;
+			@include colbg($main-color,#FDF4B5);
+		}
+	}
+	&_top {
+		height: 124px;
+	}
+	&_posi {
+		position: relative;
+		top: -80px;
+		margin-bottom: -80px;
+	}
+	&_single {
+		@include size(100%,150px);
+		padding-top: 10px;
+		text-align: center;
+		font-size: 14px;
+		color: $main-color;
+		background: url(../img/single_coupon_bg.png) no-repeat center;
+		background-size: 100% 100%;
+		h5 {
+			font-size: 24px;
+			font-weight: bold;
+		}
+	}
+	&_zhuan {		
+		padding: 0 10px;
+		color: $four-color;
+	}
+	&_get {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		@include lineht(30px);
+		color: $white-color;
+	}
+}
+
+.my {
+	&_box {
+		position: relative;
+		overflow: hidden;
+		padding: 12px 12px 0 36px;
+		&:after {
+			content: '';
+			@include position(15px,0);
+			@include size(2px,100%);
+			background-color: $main-color;
+		}
+	}
+	&_item {
+		margin-bottom: 12px;
+		h6 {
+			position: relative;
+			font-size: 18px;
+			margin-bottom: 20px;
+			&:before {
+				content: '';
+				@include position(-30px,50%);
+				transform: translateY(-50%);
+				@include size(20px,20px);
+				border: 2px solid $main-color;
+				border-radius: 50%;
+				background-color: $white-color;
+				z-index: 2;
+			}
+		}
+	}
+}
+
+.group {
+	&_pic {
+		height: 200px;
+	}
+	&_item {
+		margin-bottom: 12px;
+		&:nth-last-child(1) {
+			margin-bottom: 0;
+		}
+	}
+	&_banner {
+		height: 120px;
+	}
+	&_arrow {
+		margin-bottom: 20px;
+	}
+	&_person {
+		height: 106px;
+		background-image: url(../img/person_made_bg.png);
+		&.group {
+			background-image: url(../img/group_made_bg.png);
+		}
+	}
+	&_btn {
+		padding: 0 10px;
+		border-radius: 100px;
+		@include lineht(32px);
+		font-size: 14px;
+		background-color: $white-color;
+		&.red {
+			color: $main-color;
+		}
+		&.blue {
+			color: #448BC0;
+		}
+	}
+	&_desc {
+		@include rowhide(2,24px);
+	}
+	&_contain {
+		position: relative;
+		@include lineht(32px);
+		padding-left: 12px;
+		&:before {
+			content: '';
+			@include position(0,0);
+			display: block;
+			@include size(2px,100%);
+			background-color: $main-color;
+		}
+	}
+}
+
+.made {
+	&_top {
+		height: 148px;
+		padding-top: 30px;
+		text-align: center;
+		color: $white-color;
+		background-image: url(../img/made_person_bg.png);
+		@extend .bg_cover;
+		&.group {
+			background-image: url(../img/made_group_bg.png);
+		}
+	}
+	&_box {
+		position: relative;
+		top: -24px;
+		width: 96%;
+		margin: 0 auto -24px;
+		padding: 12px;
+		border-radius: 16px;
+		background-color: $white-color;
+	}
+	&_lb {
+		width: 76px;
+		margin-right: 10px;
+	}
+}
+
+.back {
+	&_box {
+		position: relative;
+		width: 100%;
+		text-align: center;
+		@include lineht(46px);
+		font-size: 16px;
+		background-color: $white-color;
+		color: $four-color;
+		border-bottom: $border;
+	}
+	&_icon {
+		@include position(0,0);
+		@include size(46px,46px);
+		@extend .flex_center;
+		img {
+			transform: rotate(180deg);
+		}
+	}
+}
+
+.wine {
+	&_tan {
+		display: none;
+		@include position(50%,50%,fixed);
+		transform: translate(-50%,-50%);
+		@include size(240px,294px);
+		text-align: center;
+		color: $main-color;
+		background: url(../img/coupon_hotel_bg.png) no-repeat center;
+		background-size: 100% 100%;
+		z-index: 1000;
+	}
+	&_close {
+		position: absolute;
+		right: 0;
+		top: -24px;
+	}
+	&_man {
+		margin: 30px 0 10px;
+		font-size: 24px;
+	}
+	&_price {
+		font-size: 100px;
+		font-weight: bold;
+		line-height: 1;
+	}
+	&_btn {
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		display: inline-block;
+		width: 140px;
+		transform: translateX(-50%);
+		border-radius: 30px;
+		font-size: 22px;
+		background-color: #fedc99;
+	}
+}
+
+.fang {
+	&_tan {
+		display: none;
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		left: 0;
+		max-height: 300px;
+		overflow-y: scroll;
+		background-color: $white-color;
+		z-index: 1000;
+	}
+}
+
+.classify {
+	&_menu {
+		@include position(0,104px,fixed);
+		width: 90px;
+		bottom: 60px;
+		overflow-y: scroll;
+		@extend .shadow_mall;
+	}
+	&_item {
+		position: relative;
+		@extend .text_ellipsis;
+		@include lineht(46px);
+		border-bottom: $border;
+		text-align: center;
+		background-color: $white-color;
+		&.active {
+			background-color: $bg-color;
+			color: $main-color;
+			&:before {
+				content: '';
+				@include position(0,0);
+				@include size(2px,100%);
+				background-color: $main-color;
+			}
+		}
+	}
+	&_wrap {
+		margin-left: 98px;
+		padding: 12px;
+		background-color: $white-color;
+	}
+}
+
+.am-btn-danger {
+	background-color: $main-color;
+	border-color: $main-color;
+}
+
+
+
+@import 'user';
+@import 'order';
+@import 'search';
+@import 'goods';
+@import 'function';
+@import 'assess';
+@import 'dope';
+@import 'cart';
+@import 'star';
+@import 'form';
+@import 'btm';
+@import 'upload';

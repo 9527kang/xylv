@@ -1,0 +1,35 @@
+.user {
+	&_top {
+		padding: 20px;
+		color: $white-color;
+		&.big {
+			padding: 40px 20px;
+		}
+	}
+	&_none {
+		position: fixed;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		padding: 20px 0;
+		transform: translateY(-50%);
+		background-color: $white-color;
+	}
+}
+
+.adr {
+	&_set {
+		font-size: 14px;
+		padding: 0 12px;
+		@include lineht(24px);
+		border-radius: 500px;
+		background-color: $gold-color;
+		color: $white-color;
+		&:hover {
+			color: $white-color;
+		}
+		&.active {
+			background-color: $main-color;
+		}
+	}
+}

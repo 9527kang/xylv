@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('public/meta.html')
+</head>
+
+<body class="">
+
+	@@include('public/top_box.html')
+
+	<div class="p_12">
+		<div class="travel_banner bd_radius bg_cover" style="background-image: url(../img/banner.png);"></div>
+	</div>
+
+	<div class="flex_between p_12 bg_white bd_btm">
+		<div class="title_left am-text-lg">问答</div>
+		<ul class="ques_menu flex_normal am-text-sm">
+			<li class="active"><a class="am-block" href="javascript:;">全部</a></li>
+			<li class=""><a class="am-block" href="javascript:;">最新</a></li>
+		</ul>
+	</div>
+
+	<div class="bd_btm_10">
+		<div class="p_12">
+			<h3 class="am-text-truncate mar_btm_6 am-text-lg">误堕入人间的绝美仙境</h3>
+			<div class="flex_between">
+				<div class="flex_normal"><img class="bd_radius_50 mar_rt_6" src="img/common_pic.jpg" width="30" height="30" alt=""><span>1234****7765</span></div>
+				<span class="am-text-sm col_nine">2019-05-05</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="p_12 bd_btm am-text-lg">共2个回答</div>
+
+	<div class="ques_unit">
+		<div class="ques_wrap">
+			@@include('public/question_unit.html')
+			@@include('public/question_unit.html')
+		</div>
+		<div class="no_data">没有更多回答~</div>
+	</div>
+	
+	<!-- 提问图片 -->
+	<a class="pic_position pic_ask am-block" href="ask.html"><img src="img/ask_pic.png" width="60" height="60" alt=""></a>
+
+	<!-- 回答图片 -->
+	<a class="pic_position pic_answer am-block" href="answer.html"><img src="img/answer_pic.png" width="102" height="45" alt=""></a>
+
+
+</body>
+
+</html>

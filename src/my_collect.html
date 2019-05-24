@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('public/meta.html')
+</head>
+
+<body class="">
+
+	@@include('public/top_box.html')
+
+	<ul class="order_hd flex_around bd_btm">
+		<li class="order_item active tab_item">景区</li>
+		<li class="order_item tab_item">民宿</li>
+		<li class="order_item tab_item">酒店</li>
+	</ul>
+
+	<div class="tab_wrap">
+		<div class="tab_cont p_12 active">
+			<div class="">
+				@@include('public/hotel_item.html')
+				@@include('public/hotel_item.html')
+				@@include('public/hotel_item.html')
+			</div>
+			<div class="no_data">没有更多收藏~</div>
+		</div>
+		<div class="tab_cont p_12">
+			<div class="">
+				@@include('public/hotel_item.html')
+			</div>
+			<div class="no_data">没有更多收藏~</div>
+		</div>
+		<div class="tab_cont p_12">
+			<div class="">
+				@@include('public/hotel_item.html')
+				@@include('public/hotel_item.html')
+			</div>
+			<div class="no_data">没有更多收藏~</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('public/meta.html')
+</head>
+
+<body class="">
+
+	@@include('public/top_box.html')
+
+	@@include('public/search_box.html')
+
+	<ul class="order_hd flex_around bd_btm">
+		<li class="order_item active tab_item">定制游</li>
+		<li class="order_item tab_item">跟团游</li>
+	</ul>
+
+	<div class="tab_wrap">
+		<div class="tab_cont active">
+			<div class="p_12">
+				<div class="group_banner mar_btm_12 bg_cover bd_radius" style="background-image:url(img/group_pic.png);"></div>
+				<div class="flex_between mar_btm_12">
+					<div class="group_made am-text-center">
+						<img src="img/icon_made_1.png" width="40" height="40" alt="">
+						<div class="am-text-sm col_nine">填写需求</div>
+					</div>
+					<img class="group_arrow" src="img/icon_arrow_big.png" width="16" height="16" alt="">
+					<div class="group_made am-text-center">
+						<img src="img/icon_made_2.png" width="40" height="40" alt="">
+						<div class="am-text-sm col_nine">设计行程</div>
+					</div>
+					<img class="group_arrow" src="img/icon_arrow_big.png" width="16" height="16" alt="">
+					<div class="group_made am-text-center">
+						<img src="img/icon_made_3.png" width="40" height="40" alt="">
+						<div class="am-text-sm col_nine">签约付款</div>
+					</div>
+					<img class="group_arrow" src="img/icon_arrow_big.png" width="16" height="16" alt="">
+					<div class="group_made am-text-center">
+						<img src="img/icon_made_4.png" width="40" height="40" alt="">
+						<div class="am-text-sm col_nine">开心出游</div>
+					</div>
+				</div>
+				<a href="made_mine.html" class="flex_between">
+					<h6>我的定制</h6><img src="img/icon_right.png" width="6" height="11" alt="">
+				</a>
+			</div>
+
+			<div class="group_person flex_between bg_cover pad_12 mar_btm_12">
+				<div class="col_white am-text-sm">
+					<div class="mar_btm_6"><span class="am-text-lg font_bold">个人定制</span><span class="mar_lt_6">个性定制</span><span class="mar_lt_6">品质体验</span></div>
+					<div class="flex_normal">
+						<div class="flex_normal mar_rt_6">
+							<img src="img/icon_checked.png" width="14" height="14" alt=""><span class="mar_lt_6">家庭旅游</span>
+						</div>
+						<div class="flex_normal mar_rt_6">
+							<img src="img/icon_checked.png" width="14" height="14" alt=""><span class="mar_lt_6">亲朋聚会</span>
+						</div>
+						<div class="flex_normal mar_rt_6">
+							<img src="img/icon_checked.png" width="14" height="14" alt=""><span class="mar_lt_6">私家小团</span>
+						</div>
+					</div>
+				</div>
+				<a href="made_person.html" class="group_btn red">立即定制</a>
+			</div>
+
+			<div class="group_person group flex_between bg_cover pad_12">
+				<div class="col_white am-text-sm">
+					<div class="mar_btm_6"><span class="am-text-lg font_bold">个人定制</span><span class="mar_lt_6">个性定制</span><span class="mar_lt_6">品质体验</span></div>
+					<div class="flex_normal">
+						<div class="flex_normal mar_rt_6">
+							<img src="img/icon_checked.png" width="14" height="14" alt=""><span class="mar_lt_6">家庭旅游</span>
+						</div>
+						<div class="flex_normal mar_rt_6">
+							<img src="img/icon_checked.png" width="14" height="14" alt=""><span class="mar_lt_6">亲朋聚会</span>
+						</div>
+						<div class="flex_normal mar_rt_6">
+							<img src="img/icon_checked.png" width="14" height="14" alt=""><span class="mar_lt_6">私家小团</span>
+						</div>
+					</div>
+				</div>
+				<a href="made_group.html" class="group_btn blue">立即定制</a>
+			</div>
+
+
+		</div>
+		<div class="tab_cont">
+			<ul class="p_12">
+				@@include('public/group_item.html')
+				@@include('public/group_item.html')
+				@@include('public/group_item.html')
+			</ul>
+			<div class="no_data">没有更多消息~</div>
+		</div>
+	</div>	
+
+</body>
+
+</html>

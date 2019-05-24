@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+}
+
+img,
+button,
+input,
+textarea,
+select {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: 0;
+}
+
+button:focus,
+input:focus {
+    outline: 0 !important;
+}
+
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+img,
+input,
+dt,
+dl,
+dd,
+button,
+textarea {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    word-break: normal;
+}
+
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+label {
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+}
+
+li {
+    display: block;
+    list-style: none;
+}
+
+html {
+    -webkit-text-size-adjust: 100%
+}
+
+form {
+    height: 100%;
+}
+
+input[type=text],
+input[type=number],
+textarea {
+    width: 100%;
+    background-color: transparent;
+}
+
+input[type=checkbox],
+input[type=radio] {
+    width: auto;
+}
+
+pre {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+em,
+i {
+    font-style: normal;
+}
+
+address,
+blockquote,
+dl,
+fieldset,
+figure,
+hr,
+ol,
+p,
+pre,
+ul {
+    margin: 0;
+}
+
+b,
+strong {
+    font-weight: normal;
+}

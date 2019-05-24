@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('public/meta.html')
+</head>
+
+<body class="pad_btm">
+
+	<!-- 返回 -->
+	<div class="back_box">
+		商城中心
+		<a class="back_icon" href="javascript:history.back(-1)">
+			<img src="img/icon_right.png" width="6" height="11" alt="">
+		</a>
+	</div>
+
+	<div class="bd_btm_10">
+		<div class="p_12 bg_white">
+			<a href="mall_search.html" class="search_unit flex_normal mar_btm_12">
+				<img src="img/icon_search.png" class="mar_rt_12" width="18" height="18" alt="">
+				<input type="text" class="flex_1 lg" placeholder="请输入搜索关键词" readonly>
+			</a>
+			<!-- banner -->
+			<div data-am-widget="slider" class="am-slider am-slider-a1 mar_btm_12"
+				data-am-slider='{&quot;directionNav&quot;:false}'>
+				<ul class="am-slides">
+					<li><img src="img/banner.png"></li>
+					<li><img src="img/banner.png"></li>
+					<li><img src="img/banner.png"></li>
+				</ul>
+			</div>
+
+			<div class="am-cf">
+				<a href="mall_kind.html" class="kind_cell am-text-sm am-text-center">
+					<img src="img/icon_mall_1.png" width="32" height="32" alt="">
+					<div class="mar_top_12 am-text-truncate">乡村特产</div>
+				<a>
+				<a href="mall_kind.html" class="kind_cell am-text-sm am-text-center">
+					<img src="img/icon_mall_2.png" width="32" height="32" alt="">
+					<div class="mar_top_12 am-text-truncate">乡村特产</div>
+				</a>
+				<a href="mall_kind.html" class="kind_cell am-text-sm am-text-center">
+					<img src="img/icon_mall_3.png" width="32" height="32" alt="">
+					<div class="mar_top_12 am-text-truncate">乡村特产</div>
+				</a>
+				<a href="mall_kind.html" class="kind_cell am-text-sm am-text-center">
+					<img src="img/icon_mall_4.png" width="32" height="32" alt="">
+					<div class="mar_top_12 am-text-truncate">乡村特产</div>
+				</a>
+				<a href="mall_kind.html" class="kind_cell am-text-sm am-text-center">
+					<img src="img/icon_mall_5.png" width="32" height="32" alt="">
+					<div class="mar_top_12 am-text-truncate">乡村特产</div>
+				<a>
+			</div>
+		</div>
+	</div>
+
+	<div class="p_12 bg_white">
+		<h6 class="font_bold col_main mar_btm_6">积分兑换</h6>
+		<div class="flex_normal mar_btm_12">
+			<a href="mall_coupon.html" class="dope_ling flex_1 bg_cover bd_radius" style="background-image: url(img/dope_quan.png);"></a>
+			<a href="mall_dope.html">
+				<img src="img/dope_send.png" class="mar_lt_12 bd_radius" width="86" height="110" alt="">
+			</a>
+		</div>
+		<a href="javascript:;" class="am-block">
+			<img src="img/mid_pic.png" class="am-block" alt="">
+		</a>
+	</div>
+
+	<div class="p_6">
+		<ul class="am-g">
+			<li class="am-u-sm-6">
+				@@include('public/goods_item.html')
+			</li>
+			<li class="am-u-sm-6">
+				@@include('public/goods_item.html')
+			</li>
+			<li class="am-u-sm-6">
+				@@include('public/goods_item.html')
+			</li>
+			<li class="am-u-sm-6">
+				@@include('public/goods_item.html')
+			</li>
+			<li class="am-u-sm-6">
+				@@include('public/goods_item.html')
+			</li>
+		</ul>
+	</div>
+	
+
+	@@include('public/btm_nav_mall.html')
+
+</body>
+
+</html>

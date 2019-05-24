@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('public/meta.html')
+</head>
+
+<body class="bg_normal">
+
+	@@include('public/top_box.html')
+
+	<form action="#">
+		<div class="bd_btm_10"></div>
+
+		<div class="bd_btm_10">
+			<div class="p_12 bd_btm flex_between bg_white">
+				<span>用户昵称</span>
+				<input type="text" class="flex_1 am-text-right lg" placeholder="输入用户昵称" value="原用户昵称">
+			</div>
+			<div class="p_12 bd_btm flex_between bg_white">
+				<span>用户头像</span>
+				<label for="thumb">
+					<img id="imgs" src="img/thumb.png" class="bd_radius_50" width="50" height="50" alt="原用户头像">
+					<input type="file" class="am-hide" id="thumb">
+				</label>
+
+			</div>
+		</div>
+
+		<div class="confirm_wrap p_12">
+			<button class="confirm_btn" id="confirm_btn" type="submit">确认修改</button>
+		</div>
+	</form>
+
+	<script type="text/javascript">
+		$("#thumb").change(function () {
+			var objUrl = getObjectURL(this.files[0]);
+			console.log(objUrl)
+			if (objUrl) {
+				$("#imgs").attr("src", objUrl)
+			}
+		});
+		//建立一個可存取到該file的url
+		function getObjectURL(file) {
+			var url = null;
+			if (window.createObjectURL != undefined) { // basic
+				url = window.createObjectURL(file);
+			} else if (window.URL != undefined) {
+				// mozilla(firefox)
+				url = window.URL.createObjectURL(file);
+			} else if (window.webkitURL != undefined) {
+				// webkit or chrome
+				url = window.webkitURL.createObjectURL(file);
+			}
+			return url;
+		}
+	</script>
+
+</body>
+
+</html>

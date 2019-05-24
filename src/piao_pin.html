@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('public/meta.html')
+	<script src="js/countDown.js"></script>
+</head>
+
+<body class="">
+
+	<!-- 返回 -->
+	<div class="back_box">
+		参与拼单
+		<a class="back_icon" href="javascript:history.back(-1)">
+			<img src="img/icon_right.png" width="6" height="11" alt="">
+		</a>		
+	</div>
+
+	<div class="am-text-center p_12">
+		<div class="mar_btm_12">参与某某某的拼单</div>
+		<div class="am-text-sm mar_btm_12">
+			<a href="javascript:;" class="mar_rt_12">仅剩 <span class="col_main am-text-default">1</span> 个名额</a><a class="count_down">剩余<span href="javascript:;" class="hour_num">00</span>:<span class="min_num">00</span>:<span class="sec_num">00</span></a>
+		</div>
+		<div class="flex_center pd_12">
+			<div class="piao_zhu">
+				<img src="img/thumb.png" class="bd_radius_50" width="70" height="70" alt=""><span>拼主</span>
+			</div>
+			<img src="img/thumb_none.png" class="bd_radius_50 bd_all" width="70" height="70" alt="">
+		</div>
+	</div>
+
+	<div class="confirm_wrap p_12">
+		<button type="button" class="confirm_btn">参与拼单</button>
+	</div>
+
+	<script>
+
+		$(function () {
+
+			//倒计时
+			$(".count_down").countDown({
+				endTimeStr: '2019/07/16 19:00:00', //结束时间
+				daySelector: ".day_num",
+				hourSelector: ".hour_num",
+				minSelector: ".min_num",
+				secSelector: ".sec_num"
+			})
+
+		})
+	</script>
+
+</body>
+
+</html>

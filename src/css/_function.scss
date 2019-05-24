@@ -1,0 +1,50 @@
+.function {
+	&_box {
+		display: flex;
+		height: 60px;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		background-color: #fff;
+		border-top: 1px solid #efefef;
+	}
+	&_lt {
+		flex: 1;
+		@extend .clearfix;
+		padding-top: 10px;
+	}
+	&_cell {
+		position: relative;
+		width: 50%;
+		float: left;
+		text-align: center;
+		font-size: 14px;
+	}
+	&_tag {
+		position: absolute;
+		top: -10px;
+		right: 0;
+		padding: 0 6px;
+		font-size: 12px;
+		background-color: $main-color;
+		color: $white-color;
+		border-radius: 1000px;
+	}
+	&_btn {
+		display: block;
+		width: 130px;
+		text-align: center;
+		@include lineht(60px);
+		color: $white-color;
+		&.full {
+			width: 50%;
+		}
+		&.danger {
+			background-color: $main-color;
+		}
+		&.warning {
+			background-color: #FF976A;
+		}
+	}
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<link rel="stylesheet" href="css/amazeui.min.css">
+<link rel="stylesheet" href="css/style.min.css">
+<link rel="stylesheet" href="css/scs.min.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/amazeui.min.js"></script>
+<script src="js/jquery.SuperSlide.2.1.3.js"></script>
+<script src="js/jquery.scs.min.js"></script>
+<script src="js/CNAddrArr.min.js"></script>
+<script src="js/myjs.js"></script>
+<title>象眼旅游</title>
+
+<script>
+// 获取当前城市及天气状态
+function showLocation(data) {
+    console.log(data.content.address_detail.city);
+}
+$.getScript("http://api.map.baidu.com/location/ip?ak=xgcQYOzqj6P60i5LZVLBVtVewQliPyXe&callback=showLocation");
+
+$.ajax({
+    type: 'GET',
+    url: 'https://www.tianqiapi.com/api/',
+    data: 'version=v1&style=1001&city=',
+    dataType: 'JSON',
+    error: function () {
+        alert('网络错误');
+    },
+    success: function (res) {
+        uptime = res.update_time.substring(11);
+        uptime = uptime.substring(0,uptime.length-3);
+       $('#weather').html('【' + res.city + '】' + res.data[0].wea + ' ' + res.data[0].tem1 + '/' + res.data[0].tem2);
+    }
+});
+
+</script>
+</head>
+
+<body class="bg_normal pad_btm">
+
+	<!-- 公共顶部 -->
+<div class="top_box flex_between bg_white pad_12 bd_btm">
+	<a href="index.html">
+		<img src="img/logo.png" width="91" height="30" alt="">
+	</a>
+	<div class="am-text-sm col_main" id="weather"></div>
+</div>
+
+	<div class="bd_btm_10"></div>
+	<div class="flex_normal flex_wrap">
+		<a href="travel.html" class="travel_tre bg_white am-text-center">
+			<img src="img/icon_travel_1.png" width="30" height="30" alt="">
+			<div class="mar_top_6">自然风光</div>
+		</a>
+		<a href="travel.html" class="travel_tre bg_white am-text-center">
+			<img src="img/icon_travel_2.png" width="30" height="30" alt="">
+			<div class="mar_top_6">果蔬采摘</div>
+		</a>
+		<a href="travel.html" class="travel_tre bg_white am-text-center">
+			<img src="img/icon_travel_3.png" width="30" height="30" alt="">
+			<div class="mar_top_6">农业观光</div>
+		</a>
+		<a href="travel.html" class="travel_tre bg_white am-text-center">
+			<img src="img/icon_travel_4.png" width="30" height="30" alt="">
+			<div class="mar_top_6">宗教文化</div>
+		</a>
+		<a href="travel.html" class="travel_tre bg_white am-text-center">
+			<img src="img/icon_travel_5.png" width="30" height="30" alt="">
+			<div class="mar_top_6">红色旅游</div>
+		</a>
+		<a href="travel.html" class="travel_tre bg_white am-text-center">
+			<img src="img/icon_travel_6.png" width="30" height="30" alt="">
+			<div class="mar_top_6">其他风光</div>
+		</a>
+	</div>
+
+	<!-- 底部导航 -->
+<div class="btm_wrap bd_top bg_white">
+	<ul class="btm_nav flex_around am-text-sm">
+		<li class="btm_cell active">
+			<a href="index.html">
+				<div class="btm_bg index"></div>
+				<h5>首页</h5>
+			</a>
+		</li>
+		<li class="btm_cell">
+			<a href="news.html">
+				<div class="btm_bg news"></div>
+				<h5>资讯</h5>
+			</a>
+		</li>
+		<li class="btm_cell">
+			<a href="travel_index.html">
+				<div class="btm_bg photo"></div>
+				<h5>旅拍</h5>
+			</a>
+		</li>
+		<li class="btm_cell">
+			<a href="mall.html">
+				<div class="btm_bg cart"></div>
+				<h5>商城</h5>
+			</a>
+		</li>
+		<li class="btm_cell">
+			<a href="user.html">
+				<div class="btm_bg user"></div>
+				<h5>我的</h5>
+			</a>
+		</li>
+	</ul>
+</div>
+
+</body>
+
+</html>

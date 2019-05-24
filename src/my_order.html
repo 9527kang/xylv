@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('public/meta.html')
+</head>
+
+<body class="">
+
+	@@include('public/top_box.html')
+
+	<ul class="order_hd flex_around bd_btm">
+		<li class="order_item active tab_item">已支付</li>
+		<li class="order_item tab_item">待支付</li>
+		<li class="order_item tab_item">退款</li>
+	</ul>
+
+	<div class="tab_wrap">
+		<div class="tab_cont p_12 active">
+			<ul>
+				<li class="ticket_piao pd_12 bd_btm">
+					@@include('public/ticket_piao.html')
+					<span class="ticket_status col_main">已支付</span>
+				</li>
+				<li class="ticket_piao pd_12 bd_btm">
+					@@include('public/ticket_piao.html')
+					<span class="ticket_status col_main">已支付</span>
+				</li>
+			</ul>
+			<div class="no_data">没有更多订单~</div>
+		</div>
+		<div class="tab_cont p_12">
+			<ul>
+				<li class="ticket_piao pd_12 bd_btm">
+					@@include('public/ticket_piao.html')
+					<span class="ticket_status col_main"><a class="am-btn am-btn-default am-btn-xs am-round mar_rt_6" href="javascript:;">取消</a><a class="am-btn am-btn-danger am-btn-xs am-round" href="javascript:;">支付</a></span>
+				</li>
+			</ul>
+			<div class="no_data">没有更多订单~</div>
+		</div>
+		<div class="tab_cont p_12">
+			<ul>
+				<li class="ticket_piao pd_12 bd_btm">
+					@@include('public/ticket_piao.html')
+					<span class="ticket_status col_main"><a class="am-btn am-btn-danger am-btn-xs am-round" href="javascript:;">退款进度</a></span>
+				</li>
+			</ul>
+			<div class="no_data">没有更多订单~</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

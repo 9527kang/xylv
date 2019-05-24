@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('public/meta.html')
+</head>
+
+<body class="">
+
+	@@include('public/top_box.html')
+
+	<div class="made_top group">
+		<div class="am-text-xl font_bold">团体定制·品质出行</div>
+		<div class="am-text-sm">填写需求/确认行程/欢乐出游</div>
+	</div>
+
+	<div class="p_12">
+		<div class="font_bold pad_btm_12 bd_btm">出游基本信息</div>
+		<a class="flex_between pd_12 bd_btm" href="javascript:;">
+			<label class="made_lb">出发城市</label>
+			<input class="flex_1 lg" type="text" value="郑州" readonly>
+			<img class="mar_lt_12" src="img/icon_right.png" width="6" height="11" alt="">
+		</a>
+		<a class="flex_between pd_12 bd_btm" href="javascript:;">
+			<label class="made_lb">目的地</label>
+			<input class="flex_1 lg" type="text" placeholder="选择目的地" readonly>
+			<img class="mar_lt_12" src="img/icon_right.png" width="6" height="11" alt="">
+		</a>
+		<a class="flex_between pd_12 bd_btm" href="javascript:;">
+			<label class="made_lb">出游日期</label>
+			<input class="flex_1 lg" type="text" value="2019-05-28" readonly>
+			<img class="mar_lt_12" src="img/icon_right.png" width="6" height="11" alt="">
+		</a>
+		<a class="flex_between pd_12 bd_btm" href="javascript:;">
+			<label class="made_lb">归来日期</label>
+			<input class="flex_1 lg" type="text" placeholder="选择归来日期" readonly>
+			<img class="mar_lt_12" src="img/icon_right.png" width="6" height="11" alt="">
+		</a>
+		<div class="pd_12" style="display:flex;">
+			<div class="made_lb">出游人数</div>
+			<div class="am-g flex_1">
+				<div class="am-u-sm-6">
+					<h6 class="mar_btm_6">成人</h6>
+					@@include('public/num_item.html')
+				</div>
+				<div class="am-u-sm-6">
+					<h6 class="mar_btm_6">儿童</h6>
+					@@include('public/num_item.html')
+				</div>
+			</div>
+		</div>
+
+		<div class="font_bold pd_12 bd_btm">更多定制需求</div>
+		<a class="flex_between pd_12 bd_btm" href="javascript:;">
+			<label class="made_lb">人均预算</label>
+			<input class="flex_1 lg" type="text" placeholder="请输入预算">
+			<span class="mar_lt_12">元/人</span>
+		</a>
+		<a class="flex_between pd_12 bd_btm" href="javascript:;">
+			<label class="made_lb">住宿标准</label>
+			<input class="flex_1 lg" value="不限" readonly>
+			<img class="mar_lt_12" src="img/icon_right.png" width="6" height="11" alt="">
+		</a>
+		<a class="flex_between pd_12 bd_btm" href="javascript:;">
+			<label class="made_lb">交通方式</label>
+			<input class="flex_1 lg" value="不限" readonly>
+			<img class="mar_lt_12" src="img/icon_right.png" width="6" height="11" alt="">
+		</a>
+		<a class="flex_between pd_12 bd_btm" href="javascript:;">
+			<label class="made_lb">用餐标准</label>
+			<input class="flex_1 lg" type="text" placeholder="请输入用餐标准">
+			<span class="mar_lt_12">元/餐/人</span>
+		</a>
+		<div class="pd_12 bd_btm" style="display:flex;">
+			<div class="made_lb">其他要求</div>
+			<div class="flex_1">
+				<textarea placeholder="如增加游玩项目、行程舒适度等（500字以内）" maxlength="500" style="height:120px;"></textarea>
+			</div>
+		</div>
+
+		<div class="font_bold pd_12 bd_btm">联系人信息</div>
+		<div class="flex_normal pd_12 bd_btm">
+			<label class="made_lb">联系人</label>
+			<input class="flex_1 lg" type="text" placeholder="请输入联系人">
+		</div>
+		<div class="flex_normal pd_12 bd_btm">
+			<label class="made_lb">公司名称</label>
+			<input class="flex_1 lg" type="text" placeholder="请输入公司名称">
+		</div>
+		<div class="flex_normal pd_12 bd_btm">
+			<label class="made_lb">手机号码</label>
+			<input class="flex_1 lg"  oninput="if(value.length>11)value=value.slice(0,11)" type="number" maxlength="11" placeholder="请输入联系电话" onchange="validatemobile(this.value)" required>
+		</div>
+		<div class="flex_normal pd_12 bd_btm">
+			<label class="made_lb">邮箱</label>
+			<input class="flex_1 lg" type="text" placeholder="可以为您发送行程安排">
+		</div>
+		<div class="pd_12">
+			<button type="submit" class="confirm_btn" style="background-color:#4488c0;">提交定制需求</button>
+		</div>
+
+	</div>
+	
+	@@include('public/num_js.html')
+	
+</body>
+
+</html>
