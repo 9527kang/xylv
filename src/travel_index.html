@@ -5,7 +5,15 @@
 	@@include('public/meta.html')
 </head>
 
-<body class="bg_normal pad_btm">
+<body class="">
+
+	<!-- 返回 -->
+	<div class="back_box">
+		乡村旅游
+		<a class="back_icon" href="javascript:history.back(-1)">
+			<img src="img/icon_right.png" width="6" height="11" alt="">
+		</a>
+	</div>
 
 	@@include('public/top_box.html')
 
@@ -37,7 +45,145 @@
 		</a>
 	</div>
 
-	@@include('public/btm_nav.html')
+	<div class="p_12">
+		<div class="travel_banner bd_radius bg_cover" style="background-image: url(img/banner.png);"></div>
+	</div>
+
+	<div class="bd_btm_10">
+		<div class="travel_scroll">
+			<a href="javascript:;" class="tab_item active">自然风光</a>
+			<a href="javascript:;" class="tab_item">果蔬采摘</a>
+			<a href="javascript:;" class="tab_item">农业观光</a>
+			<a href="javascript:;" class="tab_item">宗教文化</a>
+			<a href="javascript:;" class="tab_item">红色旅游</a>
+			<a href="javascript:;" class="tab_item">其他风光</a>
+		</div>
+	</div>
+
+	<div class="tab_wrap">
+		<div class="tab_cont active">
+			<!-- 自然风光推荐 -->
+			<div class="bd_btm_10">
+				<div class="p_12 bg_white">
+					<div class="title_left">
+						自然风光推荐
+					</div>
+				</div>
+				<div class="list_box pad_lt_12 pad_btm_12">
+					@@include('public/title_item.html')
+					@@include('public/title_item.html')
+					@@include('public/title_item.html')
+				</div>
+			</div>
+			<div class="p_12">
+				@@include('public/scenic_item.html')
+				@@include('public/scenic_item.html')
+				@@include('public/scenic_item.html')
+			</div>
+			<div class="no_data">没有更多推荐~</div>
+			<!-- 自然风光推荐 -->
+		</div>
+		<div class="tab_cont">
+			<!-- 果蔬采摘推荐 -->
+			<div class="bd_btm_10">
+				<div class="p_12 bg_white">
+					<div class="title_left">
+						果蔬采摘推荐
+					</div>
+				</div>
+				<div class="list_box pad_lt_12 pad_btm_12">
+					@@include('public/title_item.html')
+					@@include('public/title_item.html')
+				</div>
+			</div>
+			<div class="p_12">
+				@@include('public/scenic_item.html')
+			</div>
+			<div class="no_data">没有更多推荐~</div>
+			<!-- 果蔬采摘推荐 -->
+		</div>
+		<div class="tab_cont">
+			<!-- 农业观光推荐 -->
+			<div class="bd_btm_10">
+				<div class="p_12 bg_white">
+					<div class="title_left">
+						农业观光推荐
+					</div>
+				</div>
+				<div class="list_box pad_lt_12 pad_btm_12">
+					@@include('public/title_item.html')
+					@@include('public/title_item.html')
+				</div>
+			</div>
+			<div class="p_12">
+				@@include('public/scenic_item.html')
+				@@include('public/scenic_item.html')
+			</div>
+			<div class="no_data">没有更多推荐~</div>
+			<!-- 农业观光推荐 -->
+		</div>
+		<div class="tab_cont">
+			<!-- 宗教文化摘推荐 -->
+			<div class="bd_btm_10">
+				<div class="p_12 bg_white">
+					<div class="title_left">
+						宗教文化摘推荐
+					</div>
+				</div>
+				<div class="list_box pad_lt_12 pad_btm_12">
+					@@include('public/title_item.html')
+					@@include('public/title_item.html')
+					@@include('public/title_item.html')
+				</div>
+			</div>
+			<div class="p_12">
+				@@include('public/scenic_item.html')
+			</div>
+			<div class="no_data">没有更多推荐~</div>
+			<!-- 宗教文化摘推荐 -->
+		</div>
+		<div class="tab_cont">
+			<!-- 红色旅游推荐 -->
+			<div class="bd_btm_10">
+				<div class="p_12 bg_white">
+					<div class="title_left">
+						红色旅游推荐
+					</div>
+				</div>
+				<div class="list_box pad_lt_12 pad_btm_12">
+					@@include('public/title_item.html')
+					@@include('public/title_item.html')
+				</div>
+			</div>
+			<div class="p_12">
+				@@include('public/scenic_item.html')
+			</div>
+			<div class="no_data">没有更多推荐~</div>
+			<!-- 红色旅游推荐 -->
+		</div>
+		<div class="tab_cont">
+			<!-- 其他风光推荐 -->
+			<div class="bd_btm_10">
+				<div class="p_12 bg_white">
+					<div class="title_left">
+						其他风光推荐
+					</div>
+				</div>
+				<div class="list_box pad_lt_12 pad_btm_12">
+					@@include('public/title_item.html')
+					@@include('public/title_item.html')
+					@@include('public/title_item.html')
+					@@include('public/title_item.html')
+				</div>
+			</div>
+			<div class="p_12">
+				@@include('public/scenic_item.html')
+				@@include('public/scenic_item.html')
+			</div>
+			<div class="no_data">没有更多推荐~</div>
+			<!-- 其他风光推荐 -->
+		</div>
+	</div>
 
 </body>
 

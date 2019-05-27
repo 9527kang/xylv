@@ -42,10 +42,18 @@ $.ajax({
 });
 
 </script>
-	<script src="js/countDown.js"></script>
+	
 </head>
 
 <body class="" style="padding-bottom:56px;">
+
+	<!-- 返回 -->
+	<div class="back_box">
+		门票抢购
+		<a class="back_icon" href="javascript:history.back(-1)">
+			<img src="img/icon_right.png" width="6" height="11" alt="">
+		</a>
+	</div>
 
 	<!-- 公共顶部 -->
 <div class="top_box flex_between bg_white pad_12 bd_btm">
@@ -76,8 +84,7 @@ $.ajax({
 				<div>活动进度<span class="mar_lt_6 col_main">50%</span></div>
 				<div>仅剩666名额</div>
 			</div>
-			<div class="am-progress am-progress-striped"
-				style="border-radius:200px;overflow:hidden;height: 14px;margin-bottom: 0;">
+			<div class="am-progress am-progress-striped" style="border-radius:200px;overflow:hidden;height: 14px;margin-bottom: 0;">
 				<div class="am-progress-bar am-progress-bar-danger" style="width: 50%"></div>
 			</div>
 		</div>
@@ -160,7 +167,7 @@ $.ajax({
 	<div class="common_bg" id="gou_bg"></div>
 	<div class="hotel_tan bg_white p_12" id="hotel_tan">
 
-		<form action="#">
+		<form action="piao_invite.html">
 			<div class="flex_normal pd_12 bd_btm mar_btm_12">
 				<div class="hotel_piao mar_rt_12 bg_cover" style="background-image:url(img/banner.png);"></div>
 				<div class="flex_1">
@@ -193,7 +200,7 @@ $.ajax({
 </div>
 			</div>
 
-			<button class="am-btn am-btn-danger am-block am-round" style="width:100%;">立即购买</button>
+			<button class="confirm_btn" type="submit">立即购买</button>
 
 		</form>
 
@@ -231,6 +238,8 @@ $.ajax({
 			</ul>
 		</div>
 	</div>
+
+	<script src="js/countDown.js"></script>
 
 	<script>
 	$(function () {

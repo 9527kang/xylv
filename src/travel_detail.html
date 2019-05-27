@@ -7,6 +7,14 @@
 
 <body class="">
 
+	<!-- 返回 -->
+	<div class="back_box">
+		乡村旅游详情
+		<a class="back_icon" href="javascript:history.back(-1)">
+			<img src="img/icon_right.png" width="6" height="11" alt="">
+		</a>
+	</div>
+
 	@@include('public/top_box.html')
 
 	<!-- banner -->
@@ -34,36 +42,24 @@
 		</div>
 	</div>
 
-	<div class="pad_12 mar_btm_12 bg_white">
-		<span>附近好玩儿</span>
-	</div>
-	<div class="list_box pad_lt_12 pad_btm_12">
-		<a href="scenic_detail.html" class="mar_rt_12 mar_btm_12">
-			@@include('public/kind_cell.html')
+	<div class="am-g am-text-center am-text-sm pad_btm_12">
+		<a href="nearby_play.html" class="am-u-sm-3">
+			<img src="img/pic_travel_1.png" class="am-center mar_btm_6" width="80" height="50" alt="">
+			<div class="am-text-truncate">附近好玩儿</div>
 		</a>
-		<a href="scenic_detail.html" class="mar_rt_12 mar_btm_12">
-			@@include('public/kind_cell.html')
+		<a href="nearby_native.html" class="am-u-sm-3">
+			<img src="img/pic_travel_2.png" class="am-center mar_btm_6" width="80" height="50" alt="">
+			<div class="am-text-truncate">附近特产</div>
 		</a>
-		<a href="scenic_detail.html" class="mar_rt_12 mar_btm_12">
-			@@include('public/kind_cell.html')
+		<a href="nearby_homestay.html" class="am-u-sm-3">
+			<img src="img/pic_travel_3.png" class="am-center mar_btm_6" width="80" height="50" alt="">
+			<div class="am-text-truncate">附近民宿</div>
 		</a>
-	</div>
-
-	<div class="pad_12 mar_btm_12 bg_white">
-		<span>附近特产</span>
-	</div>
-	<div class="list_box pad_lt_12 pad_btm_12">
-		<a href="scenic_detail.html" class="mar_rt_12 mar_btm_12">
-			@@include('public/kind_cell_pic.html')
-		</a>
-		<a href="scenic_detail.html" class="mar_rt_12 mar_btm_12">
-			@@include('public/kind_cell_pic.html')
-		</a>
-		<a href="scenic_detail.html" class="mar_rt_12 mar_btm_12">
-			@@include('public/kind_cell_pic.html')
+		<a href="navigate.html" class="am-u-sm-3">
+			<img src="img/pic_travel_4.png" class="am-center mar_btm_6" width="80" height="50" alt="">
+			<div class="am-text-truncate">导航</div>
 		</a>
 	</div>
-
 
 </body>
 

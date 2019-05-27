@@ -144,6 +144,10 @@
     border-bottom: $border;
 }
 
+.bd_btm_white {
+    border-bottom: 1px solid $white-color;
+}
+
 .bd_top {
     border-top: $border;
 }
@@ -189,7 +193,7 @@
 }
 
 .col_main {
-    color: $main-color;
+    color: $main-color!important;
 }
 
 .col_nine {
@@ -218,6 +222,10 @@
 
 .bg_white {
     background-color: $white-color;
+}
+
+.bg_transparent {
+    background-color: transparent!important;
 }
 
 .bd_btm_10 {
@@ -254,15 +262,22 @@ input[type=radio]:checked:after {
     background-image: url(../img/icon-choice-hov.png);
 }
 
-.webkit_box {
-    display: -webkit-box;
-    flex-direction: column;
-    height: 100%;
+.webkit {
+    &_box {
+        display: -webkit-box;
+        flex-direction: column;
+        height: 100%;
+    }
+    &_content {
+        flex: 1;
+        overflow-x: hidden;
+        overflow-y: auto;
+        position: relative;
+    }
 }
 
-.webkit_content {
-    flex: 1;
-	overflow-x: hidden;
-	overflow-y: auto;
-	position: relative;
+body {
+    &.no_scroll {
+        overflow: hidden;
+    }
 }

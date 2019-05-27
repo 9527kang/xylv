@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('public/meta.html')
+	
+</head>
+
+<body>
+
+	<!-- 返回 -->
+	<div class="back_box">
+		邀请好友
+		<a class="back_icon" href="javascript:history.back(-1)">
+			<img src="img/icon_right.png" width="6" height="11" alt="">
+		</a>
+	</div>
+
+	@@include('public/top_box.html')
+
+	<div class="p_12">
+		<div class="flex_center pd_12 bd_btm mar_btm_12">
+			<div class="piao_zhu">
+				<img src="img/thumb.png" class="bd_radius_50" width="50" height="50" alt=""><span>拼主</span>
+			</div>
+			<img src="img/thumb_none.png" class="bd_radius_50 bd_all" width="50" height="50" alt="">
+		</div>
+		<div class="count_down pad_12 bg_normal bd_radius am-center am-text-center" style="width: 120px;"><span class="hour_num">00</span>:<span class="min_num">00</span>:<span class="sec_num">00</span></div>		
+	</div>
+
+	<div class="bd_btm_10">
+		<div class="p_12 am-text-center">
+			<div class="mar_btm_12">还差<span class="col_main">1</span>人，赶快邀请好友来拼单吧</div>
+			<a href="javascript:;" class="am-btn am-btn-danger am-btn-block bd_radius mar_btm_12">邀请好友拼单</a>
+			<a href="index.html" class="am-btn am-btn-danger am-btn-block bg_transparent bd_radius col_main">回到首页</a>
+		</div>
+	</div>
+	
+	<div class="pad_12">		
+
+		<a href="javascript:;" class="pd_12 bd_btm flex_between">
+			<h6>订单详情</h6><img src="img/icon_right.png" width="6" height="11" alt="">
+		</a>
+
+		<div class="pd_12 bd_btm flex_between">
+			<h6 class="mar_rt_12">订单规则</h6><span class="am-text-sm col_nine">好友拼单 人满发货 人不满退款</span>
+		</div>
+
+		<div class="">
+			<h5 class="am-text-lg mar_top_12">精彩推荐</h5>
+			<a href="piao_detail.html" class="flex_normal pd_12 bd_btm">
+				<div class="hotel_piao bd_radius mar_rt_12 bg_cover" style="background-image:url(img/banner.png);"><span class="kind_tag">top1</span></div>
+				<div class="flex_1">
+					<div class="hotel_wrap">
+						<h3>福照楼汽锅鸡饭店</h3>
+						<div class="flex_1 am-text-sm col_nine">(周末及节假日)门票团购抢购</div>
+						<div class="flex_between">
+							<span class="col_deputy">抢购</span>
+							<div class="col_nine am-text-sm">价格<span class="col_main mar_rt_6 am-text-default">￥66.00</span>起
+							</div>
+						</div>
+					</div>
+				</div>
+			</a>
+			<a href="piao_detail.html" class="flex_normal pd_12 bd_btm">
+				<div class="hotel_piao bd_radius mar_rt_12 bg_cover" style="background-image:url(img/banner.png);"><span class="kind_tag">top2</span></div>
+				<div class="flex_1">
+					<div class="hotel_wrap">
+						<h3>福照楼汽锅鸡饭店</h3>
+						<div class="flex_1 am-text-sm col_nine">(周末及节假日)门票团购抢购</div>
+						<div class="flex_between">
+							<span class="col_deputy">抢购</span>
+							<div class="col_nine am-text-sm">价格<span class="col_main mar_rt_6 am-text-default">￥66.00</span>起
+							</div>
+						</div>
+					</div>
+				</div>
+			</a>
+			<a href="piao_detail.html" class="flex_normal pd_12 bd_btm">
+				<div class="hotel_piao bd_radius mar_rt_12 bg_cover" style="background-image:url(img/banner.png);"><span class="kind_tag">top3</span></div>
+				<div class="flex_1">
+					<div class="hotel_wrap">
+						<h3>福照楼汽锅鸡饭店</h3>
+						<div class="flex_1 am-text-sm col_nine">(周末及节假日)门票团购抢购</div>
+						<div class="flex_between">
+							<span class="col_deputy">抢购</span>
+							<div class="col_nine am-text-sm">价格<span class="col_main mar_rt_6 am-text-default">￥66.00</span>起
+							</div>
+						</div>
+					</div>
+				</div>
+			</a>
+			<a href="piao_detail.html" class="flex_normal pd_12 bd_btm">
+				<div class="hotel_piao bd_radius mar_rt_12 bg_cover" style="background-image:url(img/banner.png);"></div>
+				<div class="flex_1">
+					<div class="hotel_wrap">
+						<h3>福照楼汽锅鸡饭店</h3>
+						<div class="flex_1 am-text-sm col_nine">(周末及节假日)门票团购抢购</div>
+						<div class="flex_between">
+							<span class="col_deputy">抢购</span>
+							<div class="col_nine am-text-sm">价格<span class="col_main mar_rt_6 am-text-default">￥66.00</span>起
+							</div>
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+
+		<div class="no_data">暂无更多数据~</div>
+
+	</div>
+
+	<script src="js/countDown.js"></script>
+	
+	<script>
+		$(function(){
+			//倒计时
+			$(".count_down").countDown({
+				endTimeStr: '2019/07/16 19:00:00', //结束时间
+				daySelector: ".day_num",
+				hourSelector: ".hour_num",
+				minSelector: ".min_num",
+				secSelector: ".sec_num"
+			})
+		})
+	</script>
+
+</body>
+
+</html>

@@ -124,6 +124,9 @@ b,
 strong {
   font-weight: normal; }
 
+body {
+  background-color: #fff; }
+
 .float_lt {
   float: left; }
 
@@ -237,6 +240,9 @@ strong {
 .bd_btm {
   border-bottom: 1px solid #efefef; }
 
+.bd_btm_white {
+  border-bottom: 1px solid #fff; }
+
 .bd_top {
   border-top: 1px solid #efefef; }
 
@@ -274,7 +280,7 @@ strong {
   z-index: -1; }
 
 .col_main {
-  color: #EB4949; }
+  color: #EB4949 !important; }
 
 .col_nine {
   color: #999; }
@@ -296,6 +302,9 @@ strong {
 
 .bg_white {
   background-color: #fff; }
+
+.bg_transparent {
+  background-color: transparent !important; }
 
 .bd_btm_10 {
   border-bottom: 10px solid #f5f5f5; }
@@ -335,6 +344,9 @@ input[type=radio]:checked:after {
   overflow-x: hidden;
   overflow-y: auto;
   position: relative; }
+
+body.no_scroll {
+  overflow: hidden; }
 
 .common_bg {
   display: none;
@@ -449,6 +461,8 @@ body.pad_btm {
     display: inline-block;
     width: 186px;
     position: relative; }
+    .list_box a.small {
+      width: 140px; }
 
 .pic_big {
   position: relative;
@@ -533,6 +547,26 @@ body.pad_btm {
 .travel_msg {
   width: 110px; }
 
+.travel_scroll {
+  white-space: nowrap;
+  overflow-y: scroll; }
+  .travel_scroll a {
+    position: relative;
+    display: inline-block;
+    line-height: 36px;
+    padding: 0 12px; }
+    .travel_scroll a.active:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 60px;
+      height: 2px;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+      background-color: #EB4949; }
+
 .detail_box {
   overflow: hidden;
   padding-top: 12px;
@@ -570,7 +604,7 @@ body.pad_btm {
 .kind_menu {
   position: fixed;
   left: 0;
-  top: 104px;
+  top: 150px;
   width: 88px;
   text-align: center;
   max-height: 450px;
@@ -627,6 +661,22 @@ body.pad_btm {
   display: block;
   width: 20%;
   float: left; }
+
+.kind_width {
+  width: 130px;
+  height: 80px; }
+
+.kind_intro {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* autoprefixer: off */
+  -webkit-box-orient: vertical;
+  /* autoprefixer: on */
+  -webkit-line-clamp: 3;
+  line-height: 20px;
+  height: 60px;
+  text-indent: 2em; }
 
 .scenic_top {
   position: relative;
@@ -939,8 +989,6 @@ body.pad_btm {
 
 .piao_zhu {
   position: relative;
-  width: 70px;
-  height: 70px;
   margin-right: 40px; }
   .piao_zhu span {
     display: inline-block;
@@ -954,7 +1002,9 @@ body.pad_btm {
     color: #fff; }
 
 .no_data {
+  display: block;
   margin: 12px 0;
+  font-size: 14px;
   text-align: center;
   color: #999; }
 
@@ -1575,6 +1625,47 @@ input.lg::-ms-input-placeholder {
   text-align: center;
   border-right: 1px solid #fff; }
 
+.choice_box {
+  position: relative; }
+
+.choice_wrap {
+  position: absolute;
+  width: 100%;
+  top: 50px;
+  left: 0; }
+
+.choice_cont {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #efefef;
+  background-color: #fff; }
+
+.choice_scroll {
+  max-height: 240px;
+  overflow-y: scroll; }
+
+.choice_flex {
+  display: flex;
+  height: 46px;
+  line-height: 46px; }
+
+.choice_reset {
+  text-align: center;
+  width: 120px;
+  background-color: #f5f5f5; }
+
+.choice_confirm {
+  flex: 1;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+  background-color: #EB4949; }
+  .choice_confirm:hover {
+    color: #fff; }
+
 .cart {
   padding: 10px 0;
   margin-bottom: 8px;
@@ -1810,6 +1901,43 @@ input.lg::-ms-input-placeholder {
   background-image: url(../img/123.png);
   background-position: 0 0;
   background-repeat: no-repeat; }
+
+.bargain_box {
+  overflow: hidden;
+  border-radius: 5px;
+  border: 1px solid #EB4949; }
+
+.bargain_lt {
+  height: 26px;
+  line-height: 26px; }
+  .bargain_lt span {
+    display: inline-block;
+    padding: 0 6px;
+    background-color: #57585A;
+    color: #fff;
+    border-radius: 4px; }
+
+.bargain_tan {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 280px;
+  height: 338px;
+  padding-top: 150px;
+  text-align: center;
+  background: url(../img/bargain_bg.png) no-repeat center;
+  background-size: 100% 100%;
+  z-index: 9999; }
+
+.bargain_pic {
+  width: 90px;
+  height: 90px; }
+
+.bargain_bang {
+  background-color: rgba(235, 73, 73, 0.15); }
 
 .form_group {
   padding: 12px;

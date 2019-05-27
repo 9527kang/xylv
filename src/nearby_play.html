@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('public/meta.html')
+</head>
+
+<body class="">
+
+	<!-- 返回 -->
+	<div class="back_box">
+		附近好玩儿
+		<a class="back_icon" href="javascript:history.back(-1)">
+			<img src="img/icon_right.png" width="6" height="11" alt="">
+		</a>
+	</div>
+
+	@@include('public/top_box.html')
+
+	<div class="p_12">
+		<div class="travel_banner bd_radius bg_cover" style="background-image: url(img/banner.png);"></div>
+	</div>
+
+	<div class="list_box pad_lt_12">
+		<a class="mar_rt_12" href="scenic_detail.html">
+			@@include('public/kind_cell.html')
+		</a>
+		<a class="mar_rt_12" href="scenic_detail.html">
+			@@include('public/kind_cell.html')
+		</a>
+		<a class="mar_rt_12" href="scenic_detail.html">
+			@@include('public/kind_cell.html')
+		</a>
+	</div>
+
+	<div class="pad_12">
+		<a class="flex_normal pd_12 bd_btm" href="scenic_detail.html">
+			@@include('public/kind_width.html')
+		</a>
+		<a class="flex_normal pd_12 bd_btm" href="scenic_detail.html">
+			@@include('public/kind_width.html')
+		</a>
+		<a class="flex_normal pd_12 bd_btm" href="scenic_detail.html">
+			@@include('public/kind_width.html')
+		</a>
+	</div>
+
+	<div class="no_data">没有更多数据~</div>
+
+</body>
+
+</html>

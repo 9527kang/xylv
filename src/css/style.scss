@@ -96,6 +96,9 @@ body.pad_btm {
 			display: inline-block;
 			width: 186px;
 			position: relative;
+			&.small {
+				width: 140px;
+			}
 		}
 	}
 }
@@ -183,6 +186,28 @@ body.pad_btm {
 	&_msg {
 		width: 110px;
 	}
+	&_scroll {
+		white-space: nowrap;
+		overflow-y: scroll;
+		a {
+			position: relative;
+			display: inline-block;
+			line-height: 36px;
+			padding: 0 12px;
+			&.active {
+				&:after {
+					content: '';
+					display: block;
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					@include size(60px,2px);
+					transform: translateX(-50%);
+					background-color: $main-color;
+				}
+			}
+		}
+	}
 }
 
 .detail {
@@ -244,7 +269,7 @@ body.pad_btm {
 	&_menu {
 		position: fixed;
 		left: 0;
-		top: 104px;
+		top: 150px;
 		width: 88px;
 		text-align: center;
 		max-height: 450px;
@@ -298,6 +323,13 @@ body.pad_btm {
 		display: block;
 		width: 20%;
 		float: left;
+	}
+	&_width {
+		@include size(130px,80px);
+	}
+	&_intro {
+		@include rowhide(3,20px);
+		text-indent: 2em;
 	}
 }
 
@@ -635,8 +667,6 @@ $piao-bg: -30deg,rgba(102,220,188,1),rgba(92,140,228,1);
 	}
 	&_zhu {
 		position: relative;
-		width: 70px;
-		height: 70px;
 		margin-right: 40px;
 		span {
 			display: inline-block;
@@ -654,7 +684,9 @@ $piao-bg: -30deg,rgba(102,220,188,1),rgba(92,140,228,1);
 
 .no {
 	&_data {
+		display: block;
 		margin: 12px 0;
+		font-size: 14px;
 		text-align: center;
 		color: $nine-color;
 	}
@@ -1028,8 +1060,10 @@ input.lg {
 @import 'function';
 @import 'assess';
 @import 'dope';
+@import 'choice';
 @import 'cart';
 @import 'star';
+@import 'bargain';
 @import 'form';
 @import 'btm';
 @import 'upload';

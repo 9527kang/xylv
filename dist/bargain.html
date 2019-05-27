@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<link rel="stylesheet" href="css/amazeui.min.css">
+<link rel="stylesheet" href="css/style.min.css">
+<link rel="stylesheet" href="css/scs.min.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/amazeui.min.js"></script>
+<script src="js/jquery.SuperSlide.2.1.3.js"></script>
+<script src="js/jquery.scs.min.js"></script>
+<script src="js/CNAddrArr.min.js"></script>
+<script src="js/myjs.js"></script>
+<title>象眼旅游</title>
+
+<script>
+// 获取当前城市及天气状态
+function showLocation(data) {
+    console.log(data.content.address_detail.city);
+}
+$.getScript("http://api.map.baidu.com/location/ip?ak=xgcQYOzqj6P60i5LZVLBVtVewQliPyXe&callback=showLocation");
+
+$.ajax({
+    type: 'GET',
+    url: 'https://www.tianqiapi.com/api/',
+    data: 'version=v1&style=1001&city=',
+    dataType: 'JSON',
+    error: function () {
+        alert('网络错误');
+    },
+    success: function (res) {
+        uptime = res.update_time.substring(11);
+        uptime = uptime.substring(0,uptime.length-3);
+       $('#weather').html('【' + res.city + '】' + res.data[0].wea + ' ' + res.data[0].tem1 + '/' + res.data[0].tem2);
+    }
+});
+
+</script>
+</head>
+
+<body class="">
+
+	<!-- 返回 -->
+	<div class="back_box">
+		砍价
+		<a class="back_icon" href="javascript:history.back(-1)">
+			<img src="img/icon_right.png" width="6" height="11" alt="">
+		</a>
+	</div>
+
+	<!-- 公共顶部 -->
+<div class="top_box flex_between bg_white pad_12 bd_btm">
+	<a href="index.html">
+		<img src="img/logo.png" width="91" height="30" alt="">
+	</a>
+	<div class="am-text-sm col_main" id="weather"></div>
+</div>
+
+	<!-- 搜索框 -->
+<div class="search_box p_12 bg_normal">
+	<div class="flex_normal">
+		<div class="search_wrap pad_12 flex_1 bg_white bd_radius am-text-sm flex_between">
+			<div class="search_location flex_normal pad_rt_12 mar_rt_12 col_main">
+				<img class="mar_rt_6" src="img/icon_location.png" width="16" height="16" alt=""><span>郑州</span>
+			</div>
+			<input class="flex_1" type="text" placeholder="请输入搜索关键词">
+			<img class="mar_lt_12" src="img/icon_search.png" width="16" height="16" alt="">
+		</div>
+		<button class="mar_lt_12">搜索</button>
+	</div>
+</div>
+
+	<div class="p_12">
+		<div class="bargain_box">
+			<div class="am-text-center pad_6_12 bg_main col_white">正在进行中</div>
+			<div class="p_12 flex_normal">				
+				<a href="bargain_help.html" class="bargain_pic bg_cover mar_rt_12 bd_radius am-block" style="background-image: url(img/car_pic.png);"></a>
+				<div class="flex_1 hotel_wrap">
+					<div class="flex_1">
+						<h5 class="am-text-truncate">湿地公园</h5>
+						<div class="am-text-sm col_nine">已抢<span class="col_main">67.25</span>元</div>
+					</div>
+					<div class="flex_between">
+						<div class="bargain_lt am-text-sm col_nine count_down">
+							<span class="hour_num">00</span> : <span class="min_num">00</span> : <span class="sec_num">00</span>后结束
+						</div>
+						<a href="javascript:;" id="continue_btn" class="am-btn am-btn-danger bd_radius am-btn-xs">继续砍价</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<ul class="pad_12 pad_btm_12 flex_around bg_white bd_btm">
+		<li class="flex_center">
+			<span class="mar_rt_6">默认排序</span><img src="img/icon_down.png" width="12" height="12" alt="">
+		</li>
+		<li class="flex_center">
+			<span class="mar_rt_6">热门团购</span><img src="img/icon_down.png" width="12" height="12" alt="">
+		</li>
+		<li class="flex_center">
+			<span class="mar_rt_6">最新开团</span><img src="img/icon_down.png" width="12" height="12" alt="">
+		</li>
+	</ul>
+
+	<div class="pad_12">
+		<div class="flex_normal pd_12 bd_btm">
+			<a href="bargain_detail.html" class="am-block hotel_piao bd_radius mar_rt_12 bg_cover" style="background-image:url(img/banner.png);"><span class="kind_tag">top1</span></a>
+			<div class="flex_1">
+				<div class="hotel_wrap">
+					<h3>湿地公园</h3>
+					<div class="flex_1 am-text-sm col_nine col_deputy">已送出1.1万件</div>
+					<div class="am-text-right">
+						<a href="bargain_detail.html" class="am-btn am-btn-danger bd_radius am-btn-xs">点击免费拿</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="flex_normal pd_12 bd_btm">
+			<a href="bargain_detail.html" class="am-block hotel_piao bd_radius mar_rt_12 bg_cover" style="background-image:url(img/banner.png);"><span class="kind_tag">top2</span></a>
+			<div class="flex_1">
+				<div class="hotel_wrap">
+					<h3>湿地公园</h3>
+					<div class="flex_1 am-text-sm col_nine col_deputy">已送出1.1万件</div>
+					<div class="am-text-right">
+						<a href="bargain_detail.html" class="am-btn am-btn-danger bd_radius am-btn-xs">点击免费拿</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="flex_normal pd_12 bd_btm">
+			<a href="bargain_detail.html" class="am-block hotel_piao bd_radius mar_rt_12 bg_cover" style="background-image:url(img/banner.png);"><span class="kind_tag">top3</span></a>
+			<div class="flex_1">
+				<div class="hotel_wrap">
+					<h3>湿地公园</h3>
+					<div class="flex_1 am-text-sm col_nine col_deputy">已送出1.1万件</div>
+					<div class="am-text-right">
+						<a href="bargain_detail.html" class="am-btn am-btn-danger bd_radius am-btn-xs">点击免费拿</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="flex_normal pd_12 bd_btm">
+			<a href="bargain_detail.html" class="am-block hotel_piao bd_radius mar_rt_12 bg_cover" style="background-image:url(img/banner.png);"></a>
+			<div class="flex_1">
+				<div class="hotel_wrap">
+					<h3>湿地公园</h3>
+					<div class="flex_1 am-text-sm col_nine col_deputy">已送出1.1万件</div>
+					<div class="am-text-right">
+						<a href="bargain_detail.html" class="am-btn am-btn-danger bd_radius am-btn-xs">点击免费拿</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="no_data">暂无更多记录~</div>
+
+	<!-- 砍价弹窗 -->
+	<div class="common_bg" id="common_bg"></div>
+	<div class="bargain_tan" id="bargain_tan">
+		<h5 class="mar_btm_12">你已砍了<span class="am-text-xl col_main">47.32元</span></h5>
+		<div class="mar_btm_12 col_main am-text-sm">分享给好友，可以多砍一刀哦</div>
+		<div class="flex_around p_12">
+			<a href="javascript:;" class="am-block">
+				<img src="img/pic_wechat.png" class="am-center mar_btm_12" width="36" height="36" alt="">
+				<div class="am-text-sm">微信</div>
+			</a>
+			<a href="javascript:;" class="am-block">
+				<img src="img/pic_tencent.png" class="am-center mar_btm_12" width="36" height="36" alt="">
+				<div class="am-text-sm">QQ</div>
+			</a>
+			<a href="javascript:;" class="am-block">
+				<img src="img/pic_friend.png" class="am-center mar_btm_12" width="36" height="36" alt="">
+				<div class="am-text-sm">朋友圈</div>
+			</a>
+		</div>
+	</div>
+
+	<script src="js/countDown.js"></script>
+
+	<script>
+		$(function(){
+			//倒计时
+			$(".count_down").countDown({
+				endTimeStr: '2019/07/16 19:00:00', //结束时间
+				daySelector: ".day_num",
+				hourSelector: ".hour_num",
+				minSelector: ".min_num",
+				secSelector: ".sec_num"
+			})
+
+			// 继续砍价
+			$('#continue_btn').click(function(){
+				$('#common_bg').fadeIn()
+				$('#bargain_tan').fadeIn()
+			})
+
+			$('#common_bg').click(function(){
+				$('#common_bg').fadeOut()
+				$('#bargain_tan').fadeOut()
+			})
+		})
+	</script>
+
+</body>
+
+</html>

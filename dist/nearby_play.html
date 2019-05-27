@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<link rel="stylesheet" href="css/amazeui.min.css">
+<link rel="stylesheet" href="css/style.min.css">
+<link rel="stylesheet" href="css/scs.min.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/amazeui.min.js"></script>
+<script src="js/jquery.SuperSlide.2.1.3.js"></script>
+<script src="js/jquery.scs.min.js"></script>
+<script src="js/CNAddrArr.min.js"></script>
+<script src="js/myjs.js"></script>
+<title>象眼旅游</title>
+
+<script>
+// 获取当前城市及天气状态
+function showLocation(data) {
+    console.log(data.content.address_detail.city);
+}
+$.getScript("http://api.map.baidu.com/location/ip?ak=xgcQYOzqj6P60i5LZVLBVtVewQliPyXe&callback=showLocation");
+
+$.ajax({
+    type: 'GET',
+    url: 'https://www.tianqiapi.com/api/',
+    data: 'version=v1&style=1001&city=',
+    dataType: 'JSON',
+    error: function () {
+        alert('网络错误');
+    },
+    success: function (res) {
+        uptime = res.update_time.substring(11);
+        uptime = uptime.substring(0,uptime.length-3);
+       $('#weather').html('【' + res.city + '】' + res.data[0].wea + ' ' + res.data[0].tem1 + '/' + res.data[0].tem2);
+    }
+});
+
+</script>
+</head>
+
+<body class="">
+
+	<!-- 返回 -->
+	<div class="back_box">
+		附近好玩儿
+		<a class="back_icon" href="javascript:history.back(-1)">
+			<img src="img/icon_right.png" width="6" height="11" alt="">
+		</a>
+	</div>
+
+	<!-- 公共顶部 -->
+<div class="top_box flex_between bg_white pad_12 bd_btm">
+	<a href="index.html">
+		<img src="img/logo.png" width="91" height="30" alt="">
+	</a>
+	<div class="am-text-sm col_main" id="weather"></div>
+</div>
+
+	<div class="p_12">
+		<div class="travel_banner bd_radius bg_cover" style="background-image: url(img/banner.png);"></div>
+	</div>
+
+	<div class="list_box pad_lt_12">
+		<a class="mar_rt_12" href="scenic_detail.html">
+			<div class="kind_thumb bg_cover mar_btm_6" style="background-image: url(img/common_pic.jpg);"><span class="kind_tag">top1</span></div>
+<div class="flex_normal">
+	<h5 class="flex_1 am-text-truncate am-text-sm">滇西密境大理丽...</h5>
+	<span class="mar_lt_6 am-text-xs col_deputy">舒适</span>
+</div>
+<ul class="am-text-xs col_nine">
+	<li>实时人数：3999</li>
+	<li>最佳容量：1.5万</li>
+	<li>最大容量：2.5万</li>
+</ul>
+
+		</a>
+		<a class="mar_rt_12" href="scenic_detail.html">
+			<div class="kind_thumb bg_cover mar_btm_6" style="background-image: url(img/common_pic.jpg);"><span class="kind_tag">top1</span></div>
+<div class="flex_normal">
+	<h5 class="flex_1 am-text-truncate am-text-sm">滇西密境大理丽...</h5>
+	<span class="mar_lt_6 am-text-xs col_deputy">舒适</span>
+</div>
+<ul class="am-text-xs col_nine">
+	<li>实时人数：3999</li>
+	<li>最佳容量：1.5万</li>
+	<li>最大容量：2.5万</li>
+</ul>
+
+		</a>
+		<a class="mar_rt_12" href="scenic_detail.html">
+			<div class="kind_thumb bg_cover mar_btm_6" style="background-image: url(img/common_pic.jpg);"><span class="kind_tag">top1</span></div>
+<div class="flex_normal">
+	<h5 class="flex_1 am-text-truncate am-text-sm">滇西密境大理丽...</h5>
+	<span class="mar_lt_6 am-text-xs col_deputy">舒适</span>
+</div>
+<ul class="am-text-xs col_nine">
+	<li>实时人数：3999</li>
+	<li>最佳容量：1.5万</li>
+	<li>最大容量：2.5万</li>
+</ul>
+
+		</a>
+	</div>
+
+	<div class="pad_12">
+		<a class="flex_normal pd_12 bd_btm" href="scenic_detail.html">
+			<div class="kind_width bg_cover mar_rt_12 bd_radius" style="background-image: url(img/common_pic.jpg);"></div>
+<div class="flex_1">
+	<div class="flex_normal">
+		<h5 class="flex_1 am-text-truncate am-text-sm">滇西密境大理丽...</h5>
+		<span class="mar_lt_6 am-text-xs col_deputy">舒适</span>
+	</div>
+	<ul class="am-text-xs col_nine">
+		<li>实时人数：3999</li>
+		<li>最佳容量：1.5万</li>
+		<li>最大容量：2.5万</li>
+	</ul>
+</div>
+		</a>
+		<a class="flex_normal pd_12 bd_btm" href="scenic_detail.html">
+			<div class="kind_width bg_cover mar_rt_12 bd_radius" style="background-image: url(img/common_pic.jpg);"></div>
+<div class="flex_1">
+	<div class="flex_normal">
+		<h5 class="flex_1 am-text-truncate am-text-sm">滇西密境大理丽...</h5>
+		<span class="mar_lt_6 am-text-xs col_deputy">舒适</span>
+	</div>
+	<ul class="am-text-xs col_nine">
+		<li>实时人数：3999</li>
+		<li>最佳容量：1.5万</li>
+		<li>最大容量：2.5万</li>
+	</ul>
+</div>
+		</a>
+		<a class="flex_normal pd_12 bd_btm" href="scenic_detail.html">
+			<div class="kind_width bg_cover mar_rt_12 bd_radius" style="background-image: url(img/common_pic.jpg);"></div>
+<div class="flex_1">
+	<div class="flex_normal">
+		<h5 class="flex_1 am-text-truncate am-text-sm">滇西密境大理丽...</h5>
+		<span class="mar_lt_6 am-text-xs col_deputy">舒适</span>
+	</div>
+	<ul class="am-text-xs col_nine">
+		<li>实时人数：3999</li>
+		<li>最佳容量：1.5万</li>
+		<li>最大容量：2.5万</li>
+	</ul>
+</div>
+		</a>
+	</div>
+
+	<div class="no_data">没有更多数据~</div>
+
+</body>
+
+</html>

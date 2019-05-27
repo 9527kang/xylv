@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('public/meta.html')
+</head>
+
+<body class="">
+
+	<!-- 返回 -->
+	<div class="back_box">
+		美食详情
+		<a class="back_icon" href="javascript:history.back(-1)">
+			<img src="img/icon_right.png" width="6" height="11" alt="">
+		</a>
+	</div>
+
+	<!-- banner -->
+	<div data-am-widget="slider" class="am-slider am-slider-a1" data-am-slider='{&quot;directionNav&quot;:false}'>
+		<ul class="am-slides">
+			<li class="hotel_item travel_item hotel_banner" style="background-image: url(img/banner.png)"></li>
+			<li class="hotel_item travel_item hotel_banner" style="background-image: url(img/banner.png)"></li>
+			<li class="hotel_item travel_item hotel_banner" style="background-image: url(img/banner.png)"></li>
+		</ul>
+	</div>
+
+	<div class="pad_12 bd_btm_10">
+		<div class="pd_12 bd_btm">
+			<div class="flex_normal">
+				<h4 class="am-text-lg mar_rt_12">嘉华饼屋</h4>
+				<div class="flex_1 am-text-right col_deputy am-text-sm">川菜 北环沿线及北部区域</div>
+			</div>
+			<div class="flex_between">
+				<span class="am-text-sm col_nine">周一至周日08:00—22:30</span>
+				<div class="col_nine am-text-sm"><span class="col_main mar_rt_6 am-text-default">￥66</span>/人</div>
+			</div>
+		</div>
+		<a class="pd_12 bd_btm flex_between bg_white" href="javascript:;">
+			<div class="flex_normal">
+				<img class="mar_rt_12" src="img/icon_mall_position.png" width="16" height="16" alt=""><span class="am-block am-text-truncate">国基路88号</span>
+			</div>
+			<img src="img/icon_right.png" width="6" height="11" alt="">
+		</a>
+		<a class="pd_12 bd_btm flex_between bg_white" href="tel:150xxxxxxxx">
+			<div class="flex_normal">
+				<img class="mar_rt_12" src="img/icon_tousu.png" width="16" height="16" alt=""><span class="am-block am-text-truncate">150xxxxxxxx</span>
+			</div>
+			<img src="img/icon_right.png" width="6" height="11" alt="">
+		</a>
+	</div>
+
+	<div class="bd_btm_10">
+		<div class="p_12 bg_white">
+			<div class="title_left">
+				推荐菜品
+			</div>
+		</div>
+		<div class="list_box pad_lt_12 pad_btm_12">
+			@@include('public/food_title.html')
+			@@include('public/food_title.html')
+			@@include('public/food_title.html')
+		</div>
+	</div>
+
+	<div class="pad_12">
+		<h5 class="am-text-lg pad_top_12">附近热门</h5>
+		@@include('public/food_item.html')
+		@@include('public/food_item.html')
+		@@include('public/food_item.html')
+	</div>
+
+	<div class="no_data">没有更多数据~</div>
+
+</body>
+
+</html>

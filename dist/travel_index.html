@@ -44,7 +44,15 @@ $.ajax({
 </script>
 </head>
 
-<body class="bg_normal pad_btm">
+<body class="">
+
+	<!-- 返回 -->
+	<div class="back_box">
+		乡村旅游
+		<a class="back_icon" href="javascript:history.back(-1)">
+			<img src="img/icon_right.png" width="6" height="11" alt="">
+		</a>
+	</div>
 
 	<!-- 公共顶部 -->
 <div class="top_box flex_between bg_white pad_12 bd_btm">
@@ -82,41 +90,283 @@ $.ajax({
 		</a>
 	</div>
 
-	<!-- 底部导航 -->
-<div class="btm_wrap bd_top bg_white">
-	<ul class="btm_nav flex_around am-text-sm">
-		<li class="btm_cell active">
-			<a href="index.html">
-				<div class="btm_bg index"></div>
-				<h5>首页</h5>
-			</a>
-		</li>
-		<li class="btm_cell">
-			<a href="news.html">
-				<div class="btm_bg news"></div>
-				<h5>资讯</h5>
-			</a>
-		</li>
-		<li class="btm_cell">
-			<a href="travel_index.html">
-				<div class="btm_bg photo"></div>
-				<h5>旅拍</h5>
-			</a>
-		</li>
-		<li class="btm_cell">
-			<a href="mall.html">
-				<div class="btm_bg cart"></div>
-				<h5>商城</h5>
-			</a>
-		</li>
-		<li class="btm_cell">
-			<a href="user.html">
-				<div class="btm_bg user"></div>
-				<h5>我的</h5>
-			</a>
-		</li>
-	</ul>
-</div>
+	<div class="p_12">
+		<div class="travel_banner bd_radius bg_cover" style="background-image: url(img/banner.png);"></div>
+	</div>
+
+	<div class="bd_btm_10">
+		<div class="travel_scroll">
+			<a href="javascript:;" class="tab_item active">自然风光</a>
+			<a href="javascript:;" class="tab_item">果蔬采摘</a>
+			<a href="javascript:;" class="tab_item">农业观光</a>
+			<a href="javascript:;" class="tab_item">宗教文化</a>
+			<a href="javascript:;" class="tab_item">红色旅游</a>
+			<a href="javascript:;" class="tab_item">其他风光</a>
+		</div>
+	</div>
+
+	<div class="tab_wrap">
+		<div class="tab_cont active">
+			<!-- 自然风光推荐 -->
+			<div class="bd_btm_10">
+				<div class="p_12 bg_white">
+					<div class="title_left">
+						自然风光推荐
+					</div>
+				</div>
+				<div class="list_box pad_lt_12 pad_btm_12">
+					<a class="mar_rt_12" href="travel_detail.html">
+	<img class="bd_radius mar_btm_6" src="img/banner.png" width="186" height="74" alt="">
+	<h4 class="am-text-truncate">滇西密境大理丽...</h4>
+</a>
+					<a class="mar_rt_12" href="travel_detail.html">
+	<img class="bd_radius mar_btm_6" src="img/banner.png" width="186" height="74" alt="">
+	<h4 class="am-text-truncate">滇西密境大理丽...</h4>
+</a>
+					<a class="mar_rt_12" href="travel_detail.html">
+	<img class="bd_radius mar_btm_6" src="img/banner.png" width="186" height="74" alt="">
+	<h4 class="am-text-truncate">滇西密境大理丽...</h4>
+</a>
+				</div>
+			</div>
+			<div class="p_12">
+				<a href="travel_detail.html" class="flex_normal pd_12 bd_btm">
+	<div class="hotel_piao bd_radius mar_rt_12 bg_cover" style="background-image:url(img/banner.png);"></div>
+	<div class="flex_1">
+		<div class="hotel_wrap">
+			<h3>云台山自然风光</h3>
+			<div class="flex_1 am-text-sm col_nine">(周末及节假日)门票团购抢购</div>
+			<div class="col_deputy">有山有水</div>
+		</div>
+	</div>
+</a>
+				<a href="travel_detail.html" class="flex_normal pd_12 bd_btm">
+	<div class="hotel_piao bd_radius mar_rt_12 bg_cover" style="background-image:url(img/banner.png);"></div>
+	<div class="flex_1">
+		<div class="hotel_wrap">
+			<h3>云台山自然风光</h3>
+			<div class="flex_1 am-text-sm col_nine">(周末及节假日)门票团购抢购</div>
+			<div class="col_deputy">有山有水</div>
+		</div>
+	</div>
+</a>
+				<a href="travel_detail.html" class="flex_normal pd_12 bd_btm">
+	<div class="hotel_piao bd_radius mar_rt_12 bg_cover" style="background-image:url(img/banner.png);"></div>
+	<div class="flex_1">
+		<div class="hotel_wrap">
+			<h3>云台山自然风光</h3>
+			<div class="flex_1 am-text-sm col_nine">(周末及节假日)门票团购抢购</div>
+			<div class="col_deputy">有山有水</div>
+		</div>
+	</div>
+</a>
+			</div>
+			<div class="no_data">没有更多推荐~</div>
+			<!-- 自然风光推荐 -->
+		</div>
+		<div class="tab_cont">
+			<!-- 果蔬采摘推荐 -->
+			<div class="bd_btm_10">
+				<div class="p_12 bg_white">
+					<div class="title_left">
+						果蔬采摘推荐
+					</div>
+				</div>
+				<div class="list_box pad_lt_12 pad_btm_12">
+					<a class="mar_rt_12" href="travel_detail.html">
+	<img class="bd_radius mar_btm_6" src="img/banner.png" width="186" height="74" alt="">
+	<h4 class="am-text-truncate">滇西密境大理丽...</h4>
+</a>
+					<a class="mar_rt_12" href="travel_detail.html">
+	<img class="bd_radius mar_btm_6" src="img/banner.png" width="186" height="74" alt="">
+	<h4 class="am-text-truncate">滇西密境大理丽...</h4>
+</a>
+				</div>
+			</div>
+			<div class="p_12">
+				<a href="travel_detail.html" class="flex_normal pd_12 bd_btm">
+	<div class="hotel_piao bd_radius mar_rt_12 bg_cover" style="background-image:url(img/banner.png);"></div>
+	<div class="flex_1">
+		<div class="hotel_wrap">
+			<h3>云台山自然风光</h3>
+			<div class="flex_1 am-text-sm col_nine">(周末及节假日)门票团购抢购</div>
+			<div class="col_deputy">有山有水</div>
+		</div>
+	</div>
+</a>
+			</div>
+			<div class="no_data">没有更多推荐~</div>
+			<!-- 果蔬采摘推荐 -->
+		</div>
+		<div class="tab_cont">
+			<!-- 农业观光推荐 -->
+			<div class="bd_btm_10">
+				<div class="p_12 bg_white">
+					<div class="title_left">
+						农业观光推荐
+					</div>
+				</div>
+				<div class="list_box pad_lt_12 pad_btm_12">
+					<a class="mar_rt_12" href="travel_detail.html">
+	<img class="bd_radius mar_btm_6" src="img/banner.png" width="186" height="74" alt="">
+	<h4 class="am-text-truncate">滇西密境大理丽...</h4>
+</a>
+					<a class="mar_rt_12" href="travel_detail.html">
+	<img class="bd_radius mar_btm_6" src="img/banner.png" width="186" height="74" alt="">
+	<h4 class="am-text-truncate">滇西密境大理丽...</h4>
+</a>
+				</div>
+			</div>
+			<div class="p_12">
+				<a href="travel_detail.html" class="flex_normal pd_12 bd_btm">
+	<div class="hotel_piao bd_radius mar_rt_12 bg_cover" style="background-image:url(img/banner.png);"></div>
+	<div class="flex_1">
+		<div class="hotel_wrap">
+			<h3>云台山自然风光</h3>
+			<div class="flex_1 am-text-sm col_nine">(周末及节假日)门票团购抢购</div>
+			<div class="col_deputy">有山有水</div>
+		</div>
+	</div>
+</a>
+				<a href="travel_detail.html" class="flex_normal pd_12 bd_btm">
+	<div class="hotel_piao bd_radius mar_rt_12 bg_cover" style="background-image:url(img/banner.png);"></div>
+	<div class="flex_1">
+		<div class="hotel_wrap">
+			<h3>云台山自然风光</h3>
+			<div class="flex_1 am-text-sm col_nine">(周末及节假日)门票团购抢购</div>
+			<div class="col_deputy">有山有水</div>
+		</div>
+	</div>
+</a>
+			</div>
+			<div class="no_data">没有更多推荐~</div>
+			<!-- 农业观光推荐 -->
+		</div>
+		<div class="tab_cont">
+			<!-- 宗教文化摘推荐 -->
+			<div class="bd_btm_10">
+				<div class="p_12 bg_white">
+					<div class="title_left">
+						宗教文化摘推荐
+					</div>
+				</div>
+				<div class="list_box pad_lt_12 pad_btm_12">
+					<a class="mar_rt_12" href="travel_detail.html">
+	<img class="bd_radius mar_btm_6" src="img/banner.png" width="186" height="74" alt="">
+	<h4 class="am-text-truncate">滇西密境大理丽...</h4>
+</a>
+					<a class="mar_rt_12" href="travel_detail.html">
+	<img class="bd_radius mar_btm_6" src="img/banner.png" width="186" height="74" alt="">
+	<h4 class="am-text-truncate">滇西密境大理丽...</h4>
+</a>
+					<a class="mar_rt_12" href="travel_detail.html">
+	<img class="bd_radius mar_btm_6" src="img/banner.png" width="186" height="74" alt="">
+	<h4 class="am-text-truncate">滇西密境大理丽...</h4>
+</a>
+				</div>
+			</div>
+			<div class="p_12">
+				<a href="travel_detail.html" class="flex_normal pd_12 bd_btm">
+	<div class="hotel_piao bd_radius mar_rt_12 bg_cover" style="background-image:url(img/banner.png);"></div>
+	<div class="flex_1">
+		<div class="hotel_wrap">
+			<h3>云台山自然风光</h3>
+			<div class="flex_1 am-text-sm col_nine">(周末及节假日)门票团购抢购</div>
+			<div class="col_deputy">有山有水</div>
+		</div>
+	</div>
+</a>
+			</div>
+			<div class="no_data">没有更多推荐~</div>
+			<!-- 宗教文化摘推荐 -->
+		</div>
+		<div class="tab_cont">
+			<!-- 红色旅游推荐 -->
+			<div class="bd_btm_10">
+				<div class="p_12 bg_white">
+					<div class="title_left">
+						红色旅游推荐
+					</div>
+				</div>
+				<div class="list_box pad_lt_12 pad_btm_12">
+					<a class="mar_rt_12" href="travel_detail.html">
+	<img class="bd_radius mar_btm_6" src="img/banner.png" width="186" height="74" alt="">
+	<h4 class="am-text-truncate">滇西密境大理丽...</h4>
+</a>
+					<a class="mar_rt_12" href="travel_detail.html">
+	<img class="bd_radius mar_btm_6" src="img/banner.png" width="186" height="74" alt="">
+	<h4 class="am-text-truncate">滇西密境大理丽...</h4>
+</a>
+				</div>
+			</div>
+			<div class="p_12">
+				<a href="travel_detail.html" class="flex_normal pd_12 bd_btm">
+	<div class="hotel_piao bd_radius mar_rt_12 bg_cover" style="background-image:url(img/banner.png);"></div>
+	<div class="flex_1">
+		<div class="hotel_wrap">
+			<h3>云台山自然风光</h3>
+			<div class="flex_1 am-text-sm col_nine">(周末及节假日)门票团购抢购</div>
+			<div class="col_deputy">有山有水</div>
+		</div>
+	</div>
+</a>
+			</div>
+			<div class="no_data">没有更多推荐~</div>
+			<!-- 红色旅游推荐 -->
+		</div>
+		<div class="tab_cont">
+			<!-- 其他风光推荐 -->
+			<div class="bd_btm_10">
+				<div class="p_12 bg_white">
+					<div class="title_left">
+						其他风光推荐
+					</div>
+				</div>
+				<div class="list_box pad_lt_12 pad_btm_12">
+					<a class="mar_rt_12" href="travel_detail.html">
+	<img class="bd_radius mar_btm_6" src="img/banner.png" width="186" height="74" alt="">
+	<h4 class="am-text-truncate">滇西密境大理丽...</h4>
+</a>
+					<a class="mar_rt_12" href="travel_detail.html">
+	<img class="bd_radius mar_btm_6" src="img/banner.png" width="186" height="74" alt="">
+	<h4 class="am-text-truncate">滇西密境大理丽...</h4>
+</a>
+					<a class="mar_rt_12" href="travel_detail.html">
+	<img class="bd_radius mar_btm_6" src="img/banner.png" width="186" height="74" alt="">
+	<h4 class="am-text-truncate">滇西密境大理丽...</h4>
+</a>
+					<a class="mar_rt_12" href="travel_detail.html">
+	<img class="bd_radius mar_btm_6" src="img/banner.png" width="186" height="74" alt="">
+	<h4 class="am-text-truncate">滇西密境大理丽...</h4>
+</a>
+				</div>
+			</div>
+			<div class="p_12">
+				<a href="travel_detail.html" class="flex_normal pd_12 bd_btm">
+	<div class="hotel_piao bd_radius mar_rt_12 bg_cover" style="background-image:url(img/banner.png);"></div>
+	<div class="flex_1">
+		<div class="hotel_wrap">
+			<h3>云台山自然风光</h3>
+			<div class="flex_1 am-text-sm col_nine">(周末及节假日)门票团购抢购</div>
+			<div class="col_deputy">有山有水</div>
+		</div>
+	</div>
+</a>
+				<a href="travel_detail.html" class="flex_normal pd_12 bd_btm">
+	<div class="hotel_piao bd_radius mar_rt_12 bg_cover" style="background-image:url(img/banner.png);"></div>
+	<div class="flex_1">
+		<div class="hotel_wrap">
+			<h3>云台山自然风光</h3>
+			<div class="flex_1 am-text-sm col_nine">(周末及节假日)门票团购抢购</div>
+			<div class="col_deputy">有山有水</div>
+		</div>
+	</div>
+</a>
+			</div>
+			<div class="no_data">没有更多推荐~</div>
+			<!-- 其他风光推荐 -->
+		</div>
+	</div>
 
 </body>
 

@@ -1,0 +1,43 @@
+.choice {
+	&_box {
+		position: relative;
+	}
+	&_wrap {
+		position: absolute;
+		width: 100%;
+		top: 50px;
+		left: 0;
+	}
+	&_cont {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		border-bottom: $border;
+		background-color: $white-color;
+	}
+	&_scroll {
+		max-height: 240px;
+		overflow-y: scroll;
+	}
+	&_flex {
+		display: flex;
+		@include lineht(46px);
+	}
+	&_reset {
+		text-align: center;
+		width: 120px;
+		background-color: $bg-color;
+	}
+	&_confirm {
+		flex: 1;
+		overflow: hidden;
+		text-align: center;
+		color: $white-color;
+		background-color: $main-color;
+		&:hover {
+			color: $white-color;
+		}
+	}
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('public/meta.html')
+</head>
+
+<body class="">
+
+	<!-- 返回 -->
+	<div class="back_box">
+		美食中心
+		<a class="back_icon" href="javascript:history.back(-1)">
+			<img src="img/icon_right.png" width="6" height="11" alt="">
+		</a>
+	</div>
+
+	@@include('public/top_box.html')
+
+	<!-- 选项 -->
+	<div class="choice_box bd_btm">
+		<ul class="flex_around bg_white p_12">
+			<li class="choice_item flex_center">
+				<span class="mar_rt_6">区域</span><img src="img/icon_down.png" width="12" height="12" alt="">
+			</li>
+			<li class="choice_item flex_center">
+				<span class="mar_rt_6">菜系</span><img src="img/icon_down.png" width="12" height="12" alt="">
+			</li>
+			<li class="choice_item flex_center">
+				<span class="mar_rt_6">智能排序</span><img src="img/icon_down.png" width="12" height="12" alt="">
+			</li>
+		</ul>
+		<ul class="choice_wrap">
+			<li class="choice_cont">
+				<div class="choice_scroll">
+					<label for="area_1" class="p_12 flex_between bd_btm">
+						<h6>不限</h6><input type="radio" name="areas" id="area_1" checked>
+					</label>
+					<label for="area_2" class="p_12 flex_between bd_btm">
+						<h6>郑州市</h6><input type="radio" name="areas" id="area_2">
+					</label>
+					<label for="area_3" class="p_12 flex_between bd_btm">
+						<h6>漯河市</h6><input type="radio" name="areas" id="area_3">
+					</label>
+				</div>
+				<div class="choice_flex flex_normal">
+					<a href="javascript:;" class="choice_reset">重置</a>
+					<a href="javascript:;" class="choice_confirm">确定</a>
+				</div>
+			</li>
+			<li class="choice_cont">
+				<div class="choice_scroll">
+					<label for="kind_1" class="p_12 flex_between bd_btm">
+						<h6>不限</h6><input type="radio" name="kinds" id="kind_1">
+					</label>
+					<label for="kind_2" class="p_12 flex_between bd_btm">
+						<h6>分类1</h6><input type="radio" name="kinds" id="kind_2">
+					</label>
+					<label for="kind_3" class="p_12 flex_between bd_btm">
+						<h6>分类2</h6><input type="radio" name="kinds" id="kind_3">
+					</label>
+				</div>
+			</li>
+			<li class="choice_cont">
+				<div class="choice_scroll">
+					<label for="price_1" class="p_12 flex_between bd_btm">
+						<h6>不限</h6><input type="radio" name="prices" id="price_1">
+					</label>
+					<label for="price_2" class="p_12 flex_between bd_btm">
+						<h6>价格由高到低</h6><input type="radio" name="prices" id="price_2">
+					</label>
+					<label for="price_3" class="p_12 flex_between bd_btm">
+						<h6>价格由低到高</h6><input type="radio" name="prices" id="price_3">
+					</label>
+				</div>
+			</li>
+		</ul>
+	</div>
+	
+
+	<div class="pad_12">
+		@@include('public/food_item.html')
+		@@include('public/food_item.html')
+		@@include('public/food_item.html')
+	</div>
+
+	<div class="no_data">没有更多数据~</div>
+
+	<!-- 蒙版 -->
+	<div class="common_bg" id="common_bg"></div>
+
+	<script>
+
+		function isChecked() {
+			$('input[type=radio]:checked').prev('h6').css('color','#EB4949')
+			$('input[type=radio]:not(:checked)').prev('h6').css('color','#333')
+		}
+
+		$(function(){
+			isChecked()
+			
+			$('input[type=radio]').change(function(){
+				isChecked()
+			})
+
+			$('.choice_item').click(function(){
+				let index = $(this).index()
+				$('.choice_cont').eq(index).slideDown()
+			})
+		})
+	</script>
+
+</body>
+
+</html>
